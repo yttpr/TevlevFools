@@ -1,0 +1,385 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>10.0</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Self\beesources.nutcracker" />
+	  <None Remove="Self\beesources\BubbleIcon.png" />
+	  <None Remove="Self\beesources\retard.bank" />
+	  <None Remove="Self\beesources\retard\retard.strings.bank" />
+	  <None Remove="Self\Itemite\Brian\Heaven_Unlock___Speeding_Ticket\SpeedingTicket.png" />
+	  <None Remove="Self\Itemite\Brian\Heaven_Unlock___Speeding_Ticket\SpeedingTicketUnlockBG.png" />
+	  <None Remove="Self\Itemite\Brian\Osman_Unlock___Skull_Banksy\SkullBanksy.png" />
+	  <None Remove="Self\Itemite\Brian\Osman_Unlock___Skull_Banksy\SkullBanksyUnlockBG.png" />
+	  <None Remove="Self\Itemite\Bubbleblower\Heaven_Unlock___Wicked_Pineapple\WickedPineapple.png" />
+	  <None Remove="Self\Itemite\Bubbleblower\Heaven_Unlock___Wicked_Pineapple\WickedPineappleUnlockBG.png" />
+	  <None Remove="Self\Itemite\Bubbleblower\Osman_Unlock___Engulfed_Nymph\EngulfedNymph.png" />
+	  <None Remove="Self\Itemite\Bubbleblower\Osman_Unlock___Engulfed_Nymph\EngulfedNymphUnlockBG.png" />
+	  <None Remove="Self\Itemite\Bubbleblower\Osman_Unlock___Engulfed_Nymph\SkillLeander.png" />
+	  <None Remove="Self\Itemite\Carpy\Heaven_Unlock___Ocean_Man\OceanMan.png" />
+	  <None Remove="Self\Itemite\Carpy\Heaven_Unlock___Ocean_Man\OceanManUnlockBG.png" />
+	  <None Remove="Self\Itemite\Carpy\Osman_Unlock___Jumblus\Jumblus.png" />
+	  <None Remove="Self\Itemite\Carpy\Osman_Unlock___Jumblus\JumblusUnlockBG.png" />
+	  <None Remove="Self\Itemite\Carpy\Osman_Unlock___Jumblus\PescatarianPierceSkill.png" />
+	  <None Remove="Self\Itemite\Gilbert\Heaven_Unlock___Bewildered_Homunculus\BewilderedHomunculus.png" />
+	  <None Remove="Self\Itemite\Gilbert\Heaven_Unlock___Bewildered_Homunculus\BewilderedHomunculusUnlockBG.png" />
+	  <None Remove="Self\Itemite\Gilbert\Osman_Unlock___Starless\Starless.png" />
+	  <None Remove="Self\Itemite\Gilbert\Osman_Unlock___Starless\StarlessUnlockBG.png" />
+	  <None Remove="Self\Itemite\Lovebug\Heaven_Unlock___Scarab_Jewel\ScarabJewel.png" />
+	  <None Remove="Self\Itemite\Lovebug\Heaven_Unlock___Scarab_Jewel\ScarabJewelUnlockBG.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFaceback.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFaceFront.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFaceOverworld.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose1.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose2.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose3.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose4.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose5.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose6.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose7.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose8.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose9.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleMaggotBack.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleMaggotFront.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleMaggotOverworld.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\SeaMonkeys.png" />
+	  <None Remove="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\SeaMonkeysUnlockBG.png" />
+	  <None Remove="Self\Itemite\Meatshot\Heaven_Unlock___Throwing_Darts\ThrowingDarts.png" />
+	  <None Remove="Self\Itemite\Meatshot\Heaven_Unlock___Throwing_Darts\ThrowingDartsUnlockBG.png" />
+	  <None Remove="Self\Itemite\Meatshot\Osman_Unlock___Rusty_Mortar\RustyMortar.png" />
+	  <None Remove="Self\Itemite\Meatshot\Osman_Unlock___Rusty_Mortar\RustyMortarUnlockBG.png" />
+	  <None Remove="Self\Itemite\Nails\Heaven_Unlock___Meatgrinder\Meatgrinder.png" />
+	  <None Remove="Self\Itemite\Nails\Heaven_Unlock___Meatgrinder\MeatgrinderUnlockBG.png" />
+	  <None Remove="Self\Itemite\Nails\Heaven_Unlock___Meatgrinder\MeatgrindSkill.png" />
+	  <None Remove="Self\Itemite\Nails\Osman_Unlock___Old_Lipstick\OldLipstick.png" />
+	  <None Remove="Self\Itemite\Nails\Osman_Unlock___Old_Lipstick\OldLipstickUnlockBG.png" />
+	  <None Remove="Self\Itemite\Zensuke\Heaven_Unlock___Seashells\Seashells.png" />
+	  <None Remove="Self\Itemite\Zensuke\Heaven_Unlock___Seashells\SeashellsUnlockBG.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\DiverArtifact.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\DiverArtifactUnlockBG.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageBack.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageFront.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageHarmlessBack.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageHarmlessFront.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageMenu.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageOverworld.png" />
+	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\RemoteControlSkill.png" />
+	  <None Remove="Self\jilbert\GilbertBack.png" />
+	  <None Remove="Self\jilbert\GilbertBalooSkill.png" />
+	  <None Remove="Self\jilbert\GilbertFront.png" />
+	  <None Remove="Self\jilbert\GilbertIcon.png" />
+	  <None Remove="Self\jilbert\GilbertLiquidSkill.png" />
+	  <None Remove="Self\jilbert\GilbertMenu.png" />
+	  <None Remove="Self\jilbert\GilbertOverworld.png" />
+	  <None Remove="Self\jilbert\GilbertPassive.png" />
+	  <None Remove="Self\jilbert\GilbertPyreSkill.png" />
+	  <None Remove="Self\jilbert\UINineSliceTest_3.png" />
+	  <None Remove="Self\Resources.meonmungday" />
+	  <None Remove="Self\Resources.tevlevday" />
+	  <None Remove="Self\Resources\BrianBack.png" />
+	  <None Remove="Self\Resources\BrianFront.png" />
+	  <None Remove="Self\Resources\BrianMenu.png" />
+	  <None Remove="Self\Resources\BrianOverworld.png" />
+	  <None Remove="Self\Resources\BubbleBlowerBack.png" />
+	  <None Remove="Self\Resources\BubbleBlowerFront.png" />
+	  <None Remove="Self\Resources\BubbleBlowerMenu.png" />
+	  <None Remove="Self\Resources\BubbleBlowerOverworld.png" />
+	  <None Remove="Self\Resources\Carpyback.png" />
+	  <None Remove="Self\Resources\CarpyFront.png" />
+	  <None Remove="Self\Resources\CarpyMenu.png" />
+	  <None Remove="Self\Resources\CarpyOverworld.png" />
+	  <None Remove="Self\Resources\FumesIcon.png" />
+	  <None Remove="Self\Resources\ItemJunk.png" />
+	  <None Remove="Self\Resources\JunkCollectorPassive.png" />
+	  <None Remove="Self\Resources\JunkRusty.png" />
+	  <None Remove="Self\Resources\JunkSharp.png" />
+	  <None Remove="Self\Resources\JunkShiny.png" />
+	  <None Remove="Self\Resources\JunkSmooth.png" />
+	  <None Remove="Self\Resources\Lovebugback.png" />
+	  <None Remove="Self\Resources\LovebugFront.png" />
+	  <None Remove="Self\Resources\LovebugMenu.png" />
+	  <None Remove="Self\Resources\LovebugOverworld.png" />
+	  <None Remove="Self\Resources\LovebugPose1.png" />
+	  <None Remove="Self\Resources\LovebugPose2.png" />
+	  <None Remove="Self\Resources\LovebugPose3.png" />
+	  <None Remove="Self\Resources\LovebugPose4.png" />
+	  <None Remove="Self\Resources\LovebugPose5.png" />
+	  <None Remove="Self\Resources\LovebugPose6.png" />
+	  <None Remove="Self\Resources\LovebugPose7.png" />
+	  <None Remove="Self\Resources\LovebugPose8.png" />
+	  <None Remove="Self\Resources\LovebugPose9.png" />
+	  <None Remove="Self\Resources\MeatshotBack.png" />
+	  <None Remove="Self\Resources\MeatShotDialogue.png" />
+	  <None Remove="Self\Resources\MeatshotFront.png" />
+	  <None Remove="Self\Resources\MeatshotMenu.png" />
+	  <None Remove="Self\Resources\MeatshotOverworld.png" />
+	  <None Remove="Self\Resources\MungWhispererPassive.png" />
+	  <None Remove="Self\Resources\NailsBack.png" />
+	  <None Remove="Self\Resources\NailsFront.png" />
+	  <None Remove="Self\Resources\NailsMenu.png" />
+	  <None Remove="Self\Resources\NailsOverworld.png" />
+	  <None Remove="Self\Resources\SkillBriefcase.png" />
+	  <None Remove="Self\Resources\SkillBubblespit.png" />
+	  <None Remove="Self\Resources\SkillCannonball.png" />
+	  <None Remove="Self\Resources\SkillCarpCry.png" />
+	  <None Remove="Self\Resources\SkillEvisceration.png" />
+	  <None Remove="Self\Resources\SkillExpelTheFluids.png" />
+	  <None Remove="Self\Resources\SkillFishyBusiness.png" />
+	  <None Remove="Self\Resources\SkillFleshRecalibrate.png" />
+	  <None Remove="Self\Resources\SkillKissyKissy.png" />
+	  <None Remove="Self\Resources\SkillLocknLoad.png" />
+	  <None Remove="Self\Resources\SkillMoneygame.png" />
+	  <None Remove="Self\Resources\SkillNailing.png" />
+	  <None Remove="Self\Resources\SkillOrderCharge.png" />
+	  <None Remove="Self\Resources\SkillOrderRetreat.png" />
+	  <None Remove="Self\Resources\SkillPeekabo.png" />
+	  <None Remove="Self\Resources\SkillPet.png" />
+	  <None Remove="Self\Resources\SkillPointBlank.png" />
+	  <None Remove="Self\Resources\SkillRainyDay.png" />
+	  <None Remove="Self\Resources\SkillSalmonSkin.png" />
+	  <None Remove="Self\Resources\SkillSnipe.png" />
+	  <None Remove="Self\Resources\SkillTrinkets.png" />
+	  <None Remove="Self\Resources\SkillWhack.png" />
+	  <None Remove="Self\Resources\SkillWhistle.png" />
+	  <None Remove="Self\Resources\steamhappyinreallife.png" />
+	  <None Remove="Self\Resources\ZensukeBack.png" />
+	  <None Remove="Self\Resources\ZensukeFront.png" />
+	  <None Remove="Self\Resources\ZensukeMenu.png" />
+	  <None Remove="Self\Resources\ZensukeOverworld.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Self\beesources.nutcracker" />
+	  <EmbeddedResource Include="Self\beesources\BubbleIcon.png" />
+	  <EmbeddedResource Include="Self\beesources\retard.bank" />
+	  <EmbeddedResource Include="Self\beesources\retard\retard.strings.bank" />
+	  <EmbeddedResource Include="Self\Itemite\Brian\Heaven_Unlock___Speeding_Ticket\SpeedingTicket.png" />
+	  <EmbeddedResource Include="Self\Itemite\Brian\Heaven_Unlock___Speeding_Ticket\SpeedingTicketUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Brian\Osman_Unlock___Skull_Banksy\SkullBanksy.png" />
+	  <EmbeddedResource Include="Self\Itemite\Brian\Osman_Unlock___Skull_Banksy\SkullBanksyUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Bubbleblower\Heaven_Unlock___Wicked_Pineapple\WickedPineapple.png" />
+	  <EmbeddedResource Include="Self\Itemite\Bubbleblower\Heaven_Unlock___Wicked_Pineapple\WickedPineappleUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Bubbleblower\Osman_Unlock___Engulfed_Nymph\EngulfedNymph.png" />
+	  <EmbeddedResource Include="Self\Itemite\Bubbleblower\Osman_Unlock___Engulfed_Nymph\EngulfedNymphUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Bubbleblower\Osman_Unlock___Engulfed_Nymph\SkillLeander.png" />
+	  <EmbeddedResource Include="Self\Itemite\Carpy\Heaven_Unlock___Ocean_Man\OceanMan.png" />
+	  <EmbeddedResource Include="Self\Itemite\Carpy\Heaven_Unlock___Ocean_Man\OceanManUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Carpy\Osman_Unlock___Jumblus\Jumblus.png" />
+	  <EmbeddedResource Include="Self\Itemite\Carpy\Osman_Unlock___Jumblus\JumblusUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Carpy\Osman_Unlock___Jumblus\PescatarianPierceSkill.png" />
+	  <EmbeddedResource Include="Self\Itemite\Gilbert\Heaven_Unlock___Bewildered_Homunculus\BewilderedHomunculus.png" />
+	  <EmbeddedResource Include="Self\Itemite\Gilbert\Heaven_Unlock___Bewildered_Homunculus\BewilderedHomunculusUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Gilbert\Osman_Unlock___Starless\Starless.png" />
+	  <EmbeddedResource Include="Self\Itemite\Gilbert\Osman_Unlock___Starless\StarlessUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Heaven_Unlock___Scarab_Jewel\ScarabJewel.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Heaven_Unlock___Scarab_Jewel\ScarabJewelUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFaceback.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFaceFront.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFaceOverworld.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose1.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose2.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose3.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose4.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose5.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose6.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose7.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose8.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleFacePose9.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleMaggotBack.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleMaggotFront.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\Scuttleface_and_maggots\ScuttleMaggotOverworld.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\SeaMonkeys.png" />
+	  <EmbeddedResource Include="Self\Itemite\Lovebug\Osman_Unlock___Sea_Monkeys\SeaMonkeysUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Meatshot\Heaven_Unlock___Throwing_Darts\ThrowingDarts.png" />
+	  <EmbeddedResource Include="Self\Itemite\Meatshot\Heaven_Unlock___Throwing_Darts\ThrowingDartsUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Meatshot\Osman_Unlock___Rusty_Mortar\RustyMortar.png" />
+	  <EmbeddedResource Include="Self\Itemite\Meatshot\Osman_Unlock___Rusty_Mortar\RustyMortarUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Nails\Heaven_Unlock___Meatgrinder\Meatgrinder.png" />
+	  <EmbeddedResource Include="Self\Itemite\Nails\Heaven_Unlock___Meatgrinder\MeatgrinderUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Nails\Heaven_Unlock___Meatgrinder\MeatgrindSkill.png" />
+	  <EmbeddedResource Include="Self\Itemite\Nails\Osman_Unlock___Old_Lipstick\OldLipstick.png" />
+	  <EmbeddedResource Include="Self\Itemite\Nails\Osman_Unlock___Old_Lipstick\OldLipstickUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Heaven_Unlock___Seashells\Seashells.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Heaven_Unlock___Seashells\SeashellsUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\DiverArtifact.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\DiverArtifactUnlockBG.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageBack.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageFront.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageHarmlessBack.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageHarmlessFront.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageMenu.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageOverworld.png" />
+	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\RemoteControlSkill.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertBack.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertBalooSkill.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertFront.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertIcon.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertLiquidSkill.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertMenu.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertOverworld.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertPassive.png" />
+	  <EmbeddedResource Include="Self\jilbert\GilbertPyreSkill.png" />
+	  <EmbeddedResource Include="Self\jilbert\UINineSliceTest_3.png" />
+	  <EmbeddedResource Include="Self\Resources.meonmungday" />
+	  <EmbeddedResource Include="Self\Resources.tevlevday" />
+	  <EmbeddedResource Include="Self\Resources\BrianBack.png" />
+	  <EmbeddedResource Include="Self\Resources\BrianFront.png" />
+	  <EmbeddedResource Include="Self\Resources\BrianMenu.png" />
+	  <EmbeddedResource Include="Self\Resources\BrianOverworld.png" />
+	  <EmbeddedResource Include="Self\Resources\BubbleBlowerBack.png" />
+	  <EmbeddedResource Include="Self\Resources\BubbleBlowerFront.png" />
+	  <EmbeddedResource Include="Self\Resources\BubbleBlowerMenu.png" />
+	  <EmbeddedResource Include="Self\Resources\BubbleBlowerOverworld.png" />
+	  <EmbeddedResource Include="Self\Resources\Carpyback.png" />
+	  <EmbeddedResource Include="Self\Resources\CarpyFront.png" />
+	  <EmbeddedResource Include="Self\Resources\CarpyMenu.png" />
+	  <EmbeddedResource Include="Self\Resources\CarpyOverworld.png" />
+	  <EmbeddedResource Include="Self\Resources\FumesIcon.png" />
+	  <EmbeddedResource Include="Self\Resources\ItemJunk.png" />
+	  <EmbeddedResource Include="Self\Resources\JunkCollectorPassive.png" />
+	  <EmbeddedResource Include="Self\Resources\JunkRusty.png" />
+	  <EmbeddedResource Include="Self\Resources\JunkSharp.png" />
+	  <EmbeddedResource Include="Self\Resources\JunkShiny.png" />
+	  <EmbeddedResource Include="Self\Resources\JunkSmooth.png" />
+	  <EmbeddedResource Include="Self\Resources\Lovebugback.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugFront.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugMenu.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugOverworld.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose1.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose2.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose3.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose4.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose5.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose6.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose7.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose8.png" />
+	  <EmbeddedResource Include="Self\Resources\LovebugPose9.png" />
+	  <EmbeddedResource Include="Self\Resources\MeatshotBack.png" />
+	  <EmbeddedResource Include="Self\Resources\MeatShotDialogue.png" />
+	  <EmbeddedResource Include="Self\Resources\MeatshotFront.png" />
+	  <EmbeddedResource Include="Self\Resources\MeatshotMenu.png" />
+	  <EmbeddedResource Include="Self\Resources\MeatshotOverworld.png" />
+	  <EmbeddedResource Include="Self\Resources\MungWhispererPassive.png" />
+	  <EmbeddedResource Include="Self\Resources\NailsBack.png" />
+	  <EmbeddedResource Include="Self\Resources\NailsFront.png" />
+	  <EmbeddedResource Include="Self\Resources\NailsMenu.png" />
+	  <EmbeddedResource Include="Self\Resources\NailsOverworld.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillBriefcase.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillBubblespit.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillCannonball.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillCarpCry.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillEvisceration.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillExpelTheFluids.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillFishyBusiness.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillFleshRecalibrate.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillKissyKissy.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillLocknLoad.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillMoneygame.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillNailing.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillOrderCharge.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillOrderRetreat.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillPeekabo.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillPet.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillPointBlank.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillRainyDay.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillSalmonSkin.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillSnipe.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillTrinkets.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillWhack.png" />
+	  <EmbeddedResource Include="Self\Resources\SkillWhistle.png" />
+	  <EmbeddedResource Include="Self\Resources\steamhappyinreallife.png" />
+	  <EmbeddedResource Include="Self\Resources\ZensukeBack.png" />
+	  <EmbeddedResource Include="Self\Resources\ZensukeFront.png" />
+	  <EmbeddedResource Include="Self\Resources\ZensukeMenu.png" />
+	  <EmbeddedResource Include="Self\Resources\ZensukeOverworld.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="0Harmony">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\0Harmony.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Assembly-CSharp.dll</HintPath>
+	  </Reference>
+	  <Reference Include="BepInEx">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\BepInEx.dll</HintPath>
+	  </Reference>
+	  <Reference Include="BrutalAPI">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\BrutalAPI.dll</HintPath>
+	  </Reference>
+	  <Reference Include="DOTween">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\DOTween.dll</HintPath>
+	  </Reference>
+	  <Reference Include="EnemyPack">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Tevlev Extra\EnemyPack.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FMODUnity">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\FMODUnity.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FMODUnityResonance">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\FMODUnityResonance.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Marosi.SerializableCollections">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Marosi.SerializableCollections.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Marosi.Utility">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Marosi.Utility.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MonoMod.RuntimeDetour">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\MonoMod.RuntimeDetour.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MonoMod.Utils">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\MonoMod.Utils.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Unity.InputSystem">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Unity.InputSystem.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Unity.TextMeshPro">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\Unity.TextMeshPro.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AnimationModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.AnimationModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AssetBundleModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.AssetBundleModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AudioModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.AudioModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.CoreModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.CoreModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.ImageConversionModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.ImageConversionModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.InputModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.InputModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.ParticleSystemModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.ParticleSystemModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UI">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.UI.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UIModule">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\UnityEngine.UIModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="YarnSpinner">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\YarnSpinner.dll</HintPath>
+	  </Reference>
+	  <Reference Include="YarnSpinner.Compiler">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\YarnSpinner.Compiler.dll</HintPath>
+	  </Reference>
+	  <Reference Include="YarnSpinner.Unity">
+	    <HintPath>..\..\..\the folder for references VS\BO Modding Generic Dependencies\YarnSpinner.Unity.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
