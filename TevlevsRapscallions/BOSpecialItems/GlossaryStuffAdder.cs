@@ -23,10 +23,10 @@ namespace BOSpecialItems
         private static readonly List<GlossaryPassives> queuedPassives = new List<GlossaryPassives>();
         private static readonly List<GlossaryKeywords> queuedKeywords = new List<GlossaryKeywords>();
 
-        [HarmonyPatch]
-        [HarmonyPatch]
-        [HarmonyPatch]
-        [HarmonyPatch]
+        [HarmonyPatch(typeof(GlossaryDataBase), nameof(GlossaryDataBase.Status), MethodType.Getter)]
+        [HarmonyPatch(typeof(GlossaryDataBase), nameof(GlossaryDataBase.Fields), MethodType.Getter)]
+        [HarmonyPatch(typeof(GlossaryDataBase), nameof(GlossaryDataBase.Passives), MethodType.Getter)]
+        [HarmonyPatch(typeof(GlossaryDataBase), nameof(GlossaryDataBase.Keywords), MethodType.Getter)]
         [HarmonyPrefix]
         private static void CatchUp(GlossaryDataBase __instance)
         {
@@ -67,7 +67,7 @@ namespace BOSpecialItems
             GlossaryStuffAdder.queuedKeywords.Clear();
         }
 
-        [HarmonyPatch(typeof(GlossaryListUIPanel), "TryInitializeStatus")]
+        [HarmonyPatch(typeof(GlossaryListUIPanel), nameof(GlossaryListUIPanel.TryInitializeStatus))]
         [HarmonyPrefix]
         private static void AddExtraStatusIconsIfNeeded(
           GlossaryListUIPanel __instance,
@@ -123,7 +123,7 @@ namespace BOSpecialItems
             }
         }
 
-        [HarmonyPatch(typeof(GlossaryListUIPanel), "TryInitializeField")]
+        [HarmonyPatch(typeof(GlossaryListUIPanel), nameof(GlossaryListUIPanel.TryInitializeField))]
         [HarmonyPrefix]
         private static void AddExtraFieldIconsIfNeeded(
           GlossaryListUIPanel __instance,
@@ -179,7 +179,7 @@ namespace BOSpecialItems
             }
         }
 
-        [HarmonyPatch(typeof(GlossaryListUIPanel), "TryInitializePassive")]
+        [HarmonyPatch(typeof(GlossaryListUIPanel), nameof(GlossaryListUIPanel.TryInitializePassive))]
         [HarmonyPrefix]
         private static void AddExtraPassiveIconsIfNeeded(
           GlossaryListUIPanel __instance,
@@ -244,7 +244,7 @@ namespace BOSpecialItems
                 Object.Destroy((Object)component.gameObject);
         }
 
-        [HarmonyPatch(typeof(GlossaryListUIPanel), "TryInitializeKeyword")]
+        [HarmonyPatch(typeof(GlossaryListUIPanel), nameof(GlossaryListUIPanel.TryInitializeKeyword))]
         [HarmonyPrefix]
         private static void AddExtraKeywordIconsIfNeeded(
           GlossaryListUIPanel __instance,
