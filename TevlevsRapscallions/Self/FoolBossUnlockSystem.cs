@@ -227,7 +227,7 @@ namespace TevlevsRapscallions
             }
             else
             {
-                Debug.Log("YOUR ITEM DOESNT EXIST MOTHERFUCKER!!!");
+                Debug.LogError("YOUR ITEM DOESNT EXIST MOTHERFUCKER!!!");
                 return;
             }
             try
@@ -251,8 +251,8 @@ namespace TevlevsRapscallions
             }
             catch (Exception ex)
             {
-                Debug.Log(ex.Message);
-                Debug.Log(ex.StackTrace);
+                Debug.LogError(ex.Message);
+                Debug.LogError(ex.StackTrace);
             }
         }
 

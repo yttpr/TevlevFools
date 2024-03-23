@@ -365,7 +365,7 @@ namespace TevlevsRapscallions
         public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
         {
             exitAmount = 0;
-            for (int i = 0; i < 3; i++) if (base.PerformEffect(stats, caster, targets, areTargetSlots, entryVariable, out int ex)) exitAmount += ex;
+            for (int i = 0; i < 3; i++) if (base.PerformEffect(stats, caster, Slots.Self.GetTargets(stats.combatSlots, caster.SlotID, caster.IsUnitCharacter), Slots.Self.AreTargetSlots, entryVariable, out int ex)) exitAmount += ex;
             return true;
         }
     }
