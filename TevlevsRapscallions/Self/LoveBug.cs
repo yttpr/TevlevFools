@@ -294,6 +294,8 @@ namespace TevlevsRapscallions
             }, 3);
             character.AddCharacter();
             LoveBug.Bug = character;
+            try { LoadedAssetsHandler.GetCharcater("LoveBug_CH")._characterName = "Lovebug"; }
+            catch { Debug.LogError("failed to change lovebug's name"); }
         }
     }
 

@@ -564,9 +564,17 @@ namespace TevlevsRapscallions
       heavenUnlock.secondTriggerConditions = new EffectorConditionSO[0];
       heavenUnlock.secondPopUp = true;
       heavenUnlock._secondImmediateEffect = false;
-      heavenUnlock.secondEffects = new Effect[1]
+            ApplyParasiteEffect copy = ScriptableObject.Instantiate(LoveBug.AddPara);
+            ParasitePassiveAbility paras = ScriptableObject.Instantiate(copy._passiveToAdd as ParasitePassiveAbility);
+            paras.effects[0].entryVariable = 2;
+            DealRandomAmountDamageConvertToParasiteEffect dam = ScriptableObject.Instantiate(paras.effects[0].effect as DealRandomAmountDamageConvertToParasiteEffect);
+            dam._minAmount = 0;
+            paras.effects[0].effect = dam;
+            paras._characterDescription = "Increases the damage received by 5% per point of Parasite. Parasite will decrease by the original unmutliplied damage amount. Parasite will remove 0-2 health from this character at the end of every turn and convert it into more Parasite.";
+            copy._passiveToAdd = paras;
+            heavenUnlock.secondEffects = new Effect[1]
       {
-        new Effect((EffectSO) LoveBug.AddPara, 3, new IntentType?(), Slots.Self)
+        new Effect((EffectSO) copy, 3, new IntentType?(), Slots.Self)
       };
       heavenUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
       EZExtensions.PCall(new Action(Scuttle.Minor), "maggot");

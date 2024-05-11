@@ -17,7 +17,7 @@ using UnityEngine;
 #nullable disable
 namespace TevlevsRapscallions
 {
-  [BepInPlugin("Tevlev.TevlevsRapscallions", "TevlevsRapscallions", "1.2.1")]
+  [BepInPlugin("Tevlev.TevlevsRapscallions", "TevlevsRapscallions", "1.2.2")]
     [BepInDependency("Bones404.BrutalAPI", BepInDependency.DependencyFlags.HardDependency)]
     public class tevlevsRapscallions : BaseUnityPlugin
   {
@@ -97,6 +97,7 @@ namespace TevlevsRapscallions
       EZExtensions.PCall(new Action(AttackSlotsErrorHook.Add), "attack slot error fix");
       Backrooms.Setup();
       EZExtensions.PCall(new Action(Unlocks.Add), "unlocks");
+            //foreach (string zone in Backrooms.Hard) Backrooms.MoreFool(zone);
     }
 
     public static void MultiplyFools()

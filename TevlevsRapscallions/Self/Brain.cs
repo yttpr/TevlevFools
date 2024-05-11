@@ -34,7 +34,26 @@ namespace TevlevsRapscallions
       character.hurtSound = LoadedAssetsHandler.GetEnemy("Mobius_BOSS").damageSound;
       character.deathSound = LoadedAssetsHandler.GetEnemy("Mobius_BOSS").deathSound;
       character.dialogueSound = LoadedAssetsHandler.GetEnemy("Mobius_BOSS").damageSound;
-      Ability ability1 = new Ability();
+
+            ExtraCCSprites_ArraySO brian = ScriptableObject.CreateInstance<ExtraCCSprites_ArraySO>();
+            brian._useDefault = ExtraSpriteType.None;
+            brian._useSpecial = (ExtraSpriteType)8384012;
+            brian._frontSprite = new Sprite[]
+            {
+                ResourceLoader.LoadSprite("BrianFrontDamaged2.png"),
+                ResourceLoader.LoadSprite("BrianFrontDamaged3.png")
+            };
+            brian._doesLoop = false;
+            brian._backSprite = new Sprite[]
+            {
+                ResourceLoader.LoadSprite("BrianBackDamaged2.png"),
+                ResourceLoader.LoadSprite("BrianBackDamaged3.png"),
+            };
+            character.extraSprites = brian;
+            SetCasterExtraSpritesEffect hitt = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
+            hitt._spriteType = (ExtraSpriteType)8384012;
+
+            Ability ability1 = new Ability();
       ability1.sprite = ResourceLoader.LoadSprite("SkillWhack", 1);
       ability1.name = "Cheeky Whack";
       ability1.description = "Deal 3 damage to the Opposing enemy twice.\nApply 2 constricted to the Opposing enemy position.\nDeals 50% more damage against constricted enemies";
@@ -106,8 +125,9 @@ namespace TevlevsRapscallions
         Pigments.Blue,
         Pigments.Yellow
       };
-      ability5.effects = new Effect[1];
+      ability5.effects = new Effect[2];
       ability5.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
+            ability5.effects[1] = new Effect(hitt, 1, null, Slots.Front);
       ability5.animationTarget = Slots.Front;
       ability5.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
       Ability ability6 = new Ability();
@@ -120,9 +140,10 @@ namespace TevlevsRapscallions
         Pigments.Blue,
         Pigments.Yellow
       };
-      ability6.effects = new Effect[1];
+      ability6.effects = new Effect[2];
       ability6.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
-      ability6.animationTarget = Slots.Front;
+            ability6.effects[1] = new Effect(hitt, 1, null, Slots.Front);
+            ability6.animationTarget = Slots.Front;
       ability6.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
       Ability ability7 = new Ability();
       ability7.sprite = ResourceLoader.LoadSprite("SkillCannonball", 1);
@@ -134,9 +155,10 @@ namespace TevlevsRapscallions
         Pigments.Blue,
         Pigments.Yellow
       };
-      ability7.effects = new Effect[1];
+      ability7.effects = new Effect[2];
       ability7.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
-      ability7.animationTarget = Slots.Front;
+            ability7.effects[1] = new Effect(hitt, 1, null, Slots.Front);
+            ability7.animationTarget = Slots.Front;
       ability7.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
       Ability ability8 = new Ability();
       ability8.sprite = ResourceLoader.LoadSprite("SkillCannonball", 1);
@@ -148,9 +170,10 @@ namespace TevlevsRapscallions
         Pigments.Blue,
         Pigments.Yellow
       };
-      ability8.effects = new Effect[1];
+      ability8.effects = new Effect[2];
       ability8.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
-      ability8.animationTarget = Slots.Front;
+            ability8.effects[1] = new Effect(hitt, 1, null, Slots.Front);
+            ability8.animationTarget = Slots.Front;
       ability8.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
       ApplyConstrictedByHealthEffect instance1 = ScriptableObject.CreateInstance<ApplyConstrictedByHealthEffect>();
       instance1._applyWeakest = false;

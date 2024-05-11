@@ -68,6 +68,10 @@
 	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageMenu.png" />
 	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageOverworld.png" />
 	  <None Remove="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\RemoteControlSkill.png" />
+	  <None Remove="Self\jilbert\BrianBackDamaged2.png" />
+	  <None Remove="Self\jilbert\BrianBackDamaged3.png" />
+	  <None Remove="Self\jilbert\BrianFrontDamaged2.png" />
+	  <None Remove="Self\jilbert\BrianFrontDamaged3.png" />
 	  <None Remove="Self\jilbert\GilbertBack.png" />
 	  <None Remove="Self\jilbert\GilbertBalooSkill.png" />
 	  <None Remove="Self\jilbert\GilbertFront.png" />
@@ -214,6 +218,10 @@
 	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageMenu.png" />
 	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\Rain_Damage\RainDamageOverworld.png" />
 	  <EmbeddedResource Include="Self\Itemite\Zensuke\Osman_Unlock___Diver_Artifact\RemoteControlSkill.png" />
+	  <EmbeddedResource Include="Self\jilbert\BrianBackDamaged2.png" />
+	  <EmbeddedResource Include="Self\jilbert\BrianBackDamaged3.png" />
+	  <EmbeddedResource Include="Self\jilbert\BrianFrontDamaged2.png" />
+	  <EmbeddedResource Include="Self\jilbert\BrianFrontDamaged3.png" />
 	  <EmbeddedResource Include="Self\jilbert\GilbertBack.png" />
 	  <EmbeddedResource Include="Self\jilbert\GilbertBalooSkill.png" />
 	  <EmbeddedResource Include="Self\jilbert\GilbertFront.png" />

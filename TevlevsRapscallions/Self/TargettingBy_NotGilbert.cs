@@ -20,7 +20,7 @@ namespace TevlevsRapscallions
       List<TargetSlotInfo> targetSlotInfoList = new List<TargetSlotInfo>();
       foreach (TargetSlotInfo targetSlotInfo in targets)
       {
-        if (!targetSlotInfo.HasUnit || !targetSlotInfo.Unit.ContainsPassiveAbility(ShitBurg.Gilby.type) && !targetSlotInfo.Unit.ContainsPassiveAbility((PassiveAbilityTypes) (ShitBurg.Gilby.type + 1)))
+        if (!targetSlotInfo.HasUnit || !targetSlotInfo.Unit.ContainsPassiveAbility(ShitBurg.Gilby.type) && !targetSlotInfo.Unit.ContainsPassiveAbility(BewilderedHomunculusHandler.gil2))
           targetSlotInfoList.Add(targetSlotInfo);
       }
       return targetSlotInfoList.ToArray();
