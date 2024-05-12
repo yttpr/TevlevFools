@@ -21,8 +21,8 @@ namespace TevlevsRapscallions
       character.healthColor = Pigments.Purple;
       character.entityID = (EntityIDs) 879045;
       character.levels = new CharacterRankedData[4];
-      character.frontSprite = ResourceLoader.LoadSprite("BrianFront");
-      character.backSprite = ResourceLoader.LoadSprite("BrianBack");
+      character.frontSprite = ResourceLoader.LoadSprite("BrianFront.png");
+      character.backSprite = ResourceLoader.LoadSprite("BrianBack.png");
       character.overworldSprite = ResourceLoader.LoadSprite("BrianOverworld", pivot: new Vector2?(new Vector2(0.5f, 0.0f)));
       character.lockedSprite = ResourceLoader.LoadSprite("BrianMenu");
       character.unlockedSprite = ResourceLoader.LoadSprite("BrianMenu");
