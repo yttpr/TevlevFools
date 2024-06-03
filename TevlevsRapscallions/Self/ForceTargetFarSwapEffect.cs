@@ -32,7 +32,7 @@ namespace TevlevsRapscallions
             instance._swapRight = false;
             CombatManager.Instance.AddSubAction((CombatAction) new EffectAction(ExtensionMethods.ToEffectInfoArray(new Effect[1]
             {
-              new Effect((EffectSO) instance, 1, new IntentType?(), Slots.Self)
+              new Effect( instance, 1, new IntentType?(), Slots.Self)
             }), target.Unit, 0));
             ++exitAmount;
           }
@@ -42,7 +42,7 @@ namespace TevlevsRapscallions
             instance._swapRight = true;
             CombatManager.Instance.AddSubAction((CombatAction) new EffectAction(ExtensionMethods.ToEffectInfoArray(new Effect[1]
             {
-              new Effect((EffectSO) instance, 1, new IntentType?(), Slots.Self)
+              new Effect( instance, 1, new IntentType?(), Slots.Self)
             }), target.Unit, 0));
             ++exitAmount;
           }
@@ -52,7 +52,7 @@ namespace TevlevsRapscallions
             instance._swapRight = false;
             CombatManager.Instance.AddSubAction((CombatAction) new EffectAction(ExtensionMethods.ToEffectInfoArray(new Effect[1]
             {
-              new Effect((EffectSO) instance, 1, new IntentType?(), Slots.Self)
+              new Effect( instance, 1, new IntentType?(), Slots.Self)
             }), target.Unit, 0));
             ++exitAmount;
           }

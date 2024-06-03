@@ -30,7 +30,7 @@ namespace TevlevsRapscallions
       effectItem1.itemPools = ItemPools.Extra;
       effectItem1.effects = new Effect[1]
       {
-        new Effect((EffectSO) instance, 2, new IntentType?(), Slots.Front)
+        new Effect( instance, 2, new IntentType?(), Slots.Front)
       };
       effectItem1.trigger = JunkItems.Call;
       EffectItem effectItem2 = new EffectItem();
@@ -45,7 +45,7 @@ namespace TevlevsRapscallions
       effectItem2.itemPools = ItemPools.Extra;
       effectItem2.effects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<HealEffect>(), 2, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<HealEffect>(), 2, new IntentType?(), Slots.Self)
       };
       effectItem2.trigger = JunkItems.Call;
       EffectItem effectItem3 = new EffectItem();
@@ -60,7 +60,7 @@ namespace TevlevsRapscallions
       effectItem3.itemPools = ItemPools.Extra;
       effectItem3.effects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyRandomStatusEffectEffect>(), 2, new IntentType?(), Slots.Front)
+        new Effect( ScriptableObject.CreateInstance<ApplyRandomStatusEffectEffect>(), 2, new IntentType?(), Slots.Front)
       };
       effectItem3.trigger = JunkItems.Call;
       EffectItem effectItem4 = new EffectItem();
@@ -75,7 +75,7 @@ namespace TevlevsRapscallions
       effectItem4.itemPools = ItemPools.Extra;
       effectItem4.effects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<GainPlayerCurrencyEffect>(), 2, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<GainPlayerCurrencyEffect>(), 2, new IntentType?(), Slots.Self)
       };
       effectItem4.trigger = JunkItems.Call;
       effectItem1.AddItem();

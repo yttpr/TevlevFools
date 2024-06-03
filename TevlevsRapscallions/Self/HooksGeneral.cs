@@ -128,13 +128,20 @@ namespace TevlevsRapscallions
         CombatManager.Instance.AddUIAction((CombatAction) new ShowItemInformationUIAction(self._caster.ID, "Throwing Darts", false, ThrowingDarts.Image));
         EffectInfo[] effectInfoArray = new EffectInfo[self._effects.Length];
         for (int index = 0; index < effectInfoArray.Length && index < self._effects.Length; ++index)
-          effectInfoArray[index] = new EffectInfo()
-          {
-            condition = self._effects[index].condition,
-            targets = (BaseCombatTargettingSO) RandomTargettingByAmount.Create(self._effects[index].targets),
-            effect = self._effects[index].effect,
-            entryVariable = self._effects[index].entryVariable
-          };
+          if (self._effects[index].effect.GetType().Name.Contains("Damage"))
+                    {
+                        effectInfoArray[index] = new EffectInfo()
+                        {
+                            condition = self._effects[index].condition,
+                            targets = (BaseCombatTargettingSO)RandomTargettingByAmount.Create(self._effects[index].targets),
+                            effect = self._effects[index].effect,
+                            entryVariable = self._effects[index].entryVariable
+                        };
+                    }
+                    else
+                    {
+                        effectInfoArray[index] = self._effects[index];
+                    }
         self._effects = effectInfoArray;
       }
       return orig(self, stats);

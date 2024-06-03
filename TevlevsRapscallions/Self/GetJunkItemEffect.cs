@@ -32,31 +32,36 @@ namespace TevlevsRapscallions
       LootItemProbability lootItemProbability4;
       lootItemProbability4.itemName = "SharpJunk_EW";
       lootItemProbability4.probability = 1;
-      Debug.Log((object) "sillycaller");
-      switch (Random.Range(0, 3))
-      {
-        case 0:
-          Debug.Log((object) "cases and vases");
-          stats.AddExtraLootAddition(lootItemProbability1.itemName);
-          break;
-        case 1:
-          Debug.Log((object) "cases and vases");
-          stats.AddExtraLootAddition(lootItemProbability2.itemName);
-          break;
-        case 2:
-          Debug.Log((object) "cases and vases");
-          stats.AddExtraLootAddition(lootItemProbability3.itemName);
-          break;
-        case 3:
-          Debug.Log((object) "cases and vases");
-          stats.AddExtraLootAddition(lootItemProbability4.itemName);
-          break;
-        case 4:
-          Debug.Log((object) "cases and vases");
-          stats.AddExtraLootAddition(lootItemProbability1.itemName);
-          break;
-      }
-      Debug.Log((object) "silly");
+      //Debug.Log((object) "sillycaller");
+      if (UnityEngine.Random.Range(0, 100) < entryVariable)
+            {
+                if (UnityEngine.Random.Range(0, 100) < 50) stats.AddTreasureLoot(1, false);
+                else stats.AddShopItemLoot(1, false);
+            }
+            else
+            {
+                switch (Random.Range(0, 3))
+                {
+                    case 0:
+                        //Debug.Log((object) "cases and vases");
+                        stats.AddExtraLootAddition(lootItemProbability1.itemName);
+                        break;
+                    case 1:
+                        //Debug.Log((object) "cases and vases");
+                        stats.AddExtraLootAddition(lootItemProbability2.itemName);
+                        break;
+                    case 2:
+                        //Debug.Log((object) "cases and vases");
+                        stats.AddExtraLootAddition(lootItemProbability3.itemName);
+                        break;
+                    case 3:
+                        //Debug.Log((object) "cases and vases");
+                        stats.AddExtraLootAddition(lootItemProbability4.itemName);
+                        break;
+                    default: goto case 0;
+                }
+            }
+      //Debug.Log((object) "silly");
       return true;
     }
   }

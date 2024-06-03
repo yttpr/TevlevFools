@@ -13,15 +13,15 @@ namespace TevlevsRapscallions
   {
     public static EffectSO[] effects = new EffectSO[9]
     {
-      (EffectSO) ScriptableObject.CreateInstance<ApplyOilSlickedEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyFrailEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyScarsEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyRupturedEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyLinkedEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyCursedEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyFireSlotEffect>(),
-      (EffectSO) ScriptableObject.CreateInstance<ApplyBubblesEffect>()
+       ScriptableObject.CreateInstance<ApplyOilSlickedEffect>(),
+       ScriptableObject.CreateInstance<ApplyFrailEffect>(),
+       ScriptableObject.CreateInstance<ApplyScarsEffect>(),
+       ScriptableObject.CreateInstance<ApplyRupturedEffect>(),
+       ScriptableObject.CreateInstance<ApplyLinkedEffect>(),
+       ScriptableObject.CreateInstance<ApplyCursedEffect>(),
+       ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(),
+       ScriptableObject.CreateInstance<ApplyFireSlotEffect>(),
+       ScriptableObject.CreateInstance<ApplyBubblesEffect>()
     };
     public int _repeatAmount = 1;
 

@@ -59,7 +59,7 @@ namespace TevlevsRapscallions
       };
       enemy.exitEffects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
       };
       Ability ability1 = new Ability();
       ability1.name = "Liquid Pummel";
@@ -74,7 +74,7 @@ namespace TevlevsRapscallions
       ability1.visuals = LoadedAssetsHandler.GetEnemyAbility("Bash_A").visuals;
       ability1.animationTarget = Slots.Sides;
       ability1.effects = new Effect[1];
-      ability1.effects[0] = new Effect((EffectSO) Gilfects.Damage, 6, new IntentType?((IntentType) 1), Slots.Sides);
+      ability1.effects[0] = new Effect( Gilfects.Damage, 6, new IntentType?((IntentType) 1), Slots.Sides);
       Ability ability2 = new Ability();
       ability2.name = "Baloooo Bibidy";
       ability2.description = "Consume 6 random Pigment from the Pigment tray. Deal a Painful amount of damage to the enemies to the Left, Right, and Opposition of Gilbert.";
@@ -88,9 +88,9 @@ namespace TevlevsRapscallions
       ability2.visuals = LoadedAssetsHandler.GetCharacterAbility("Huff_1_A").visuals;
       ability2.animationTarget = (BaseCombatTargettingSO) Gilfects.AllGilb;
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
-      ability2.effects[2] = new Effect((EffectSO) Gilfects.Damage, 4, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
-      ability2.effects[1] = new Effect((EffectSO) Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
+      ability2.effects[0] = new Effect( Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
+      ability2.effects[2] = new Effect( Gilfects.Damage, 4, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
+      ability2.effects[1] = new Effect( Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
       enemy.abilities = new Ability[4]
       {
         ShitBurg.FakeSlap,
@@ -129,7 +129,7 @@ namespace TevlevsRapscallions
       };
       enemy.exitEffects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
       };
       Ability ability1 = new Ability();
       ability1.name = "Liquid Fists";
@@ -144,7 +144,7 @@ namespace TevlevsRapscallions
       ability1.visuals = LoadedAssetsHandler.GetEnemyAbility("Bash_A").visuals;
       ability1.animationTarget = Slots.Sides;
       ability1.effects = new Effect[1];
-      ability1.effects[0] = new Effect((EffectSO) Gilfects.Damage, 8, new IntentType?((IntentType) 2), Slots.Sides);
+      ability1.effects[0] = new Effect( Gilfects.Damage, 8, new IntentType?((IntentType) 2), Slots.Sides);
       Ability ability2 = new Ability();
       ability2.name = "Baloooo Vavedour";
       ability2.description = "Consume 6 random Pigment from the Pigment tray. Deal a Painful amount of damage to the enemies to the Left, Right, and Opposition of Gilbert.";
@@ -158,9 +158,9 @@ namespace TevlevsRapscallions
       ability2.visuals = LoadedAssetsHandler.GetCharacterAbility("Huff_1_A").visuals;
       ability2.animationTarget = (BaseCombatTargettingSO) Gilfects.AllGilb;
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
-      ability2.effects[2] = new Effect((EffectSO) Gilfects.Damage, 5, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
-      ability2.effects[1] = new Effect((EffectSO) Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
+      ability2.effects[0] = new Effect( Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
+      ability2.effects[2] = new Effect( Gilfects.Damage, 5, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
+      ability2.effects[1] = new Effect( Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
       enemy.abilities = new Ability[4]
       {
         ShitBurg.FakeSlap,
@@ -199,7 +199,7 @@ namespace TevlevsRapscallions
       };
       enemy.exitEffects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
       };
       Ability ability1 = new Ability();
       ability1.name = "Liquid Strike";
@@ -214,7 +214,7 @@ namespace TevlevsRapscallions
       ability1.visuals = LoadedAssetsHandler.GetEnemyAbility("Bash_A").visuals;
       ability1.animationTarget = Slots.Sides;
       ability1.effects = new Effect[1];
-      ability1.effects[0] = new Effect((EffectSO) Gilfects.Damage, 10, new IntentType?((IntentType) 2), Slots.Sides);
+      ability1.effects[0] = new Effect( Gilfects.Damage, 10, new IntentType?((IntentType) 2), Slots.Sides);
       Ability ability2 = new Ability();
       ability2.name = "Baloooo Elemas";
       ability2.description = "Consume 6 random Pigment from the Pigment tray. Deal a Painful amount of damage to the enemies to the Left, Right, and Opposition of Gilbert.";
@@ -228,9 +228,9 @@ namespace TevlevsRapscallions
       ability2.visuals = LoadedAssetsHandler.GetCharacterAbility("Huff_1_A").visuals;
       ability2.animationTarget = (BaseCombatTargettingSO) Gilfects.AllGilb;
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
-      ability2.effects[2] = new Effect((EffectSO) Gilfects.Damage, 6, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
-      ability2.effects[1] = new Effect((EffectSO) Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
+      ability2.effects[0] = new Effect( Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
+      ability2.effects[2] = new Effect( Gilfects.Damage, 6, new IntentType?((IntentType) 1), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
+      ability2.effects[1] = new Effect( Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
       enemy.abilities = new Ability[4]
       {
         ShitBurg.FakeSlap,
@@ -269,7 +269,7 @@ namespace TevlevsRapscallions
       };
       enemy.exitEffects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<GilbertExitEffect>(), 1, new IntentType?(), Slots.Self)
       };
       Ability ability1 = new Ability();
       ability1.name = "Liquid Beatwodn";
@@ -284,7 +284,7 @@ namespace TevlevsRapscallions
       ability1.visuals = LoadedAssetsHandler.GetEnemyAbility("Bash_A").visuals;
       ability1.animationTarget = Slots.Sides;
       ability1.effects = new Effect[1];
-      ability1.effects[0] = new Effect((EffectSO) Gilfects.Damage, 12, new IntentType?((IntentType) 3), Slots.Sides);
+      ability1.effects[0] = new Effect( Gilfects.Damage, 12, new IntentType?((IntentType) 3), Slots.Sides);
       Ability ability2 = new Ability();
       ability2.name = "Baloooo Bephelement";
       ability2.description = "Consume 6 random Pigment from the Pigment tray. Deal a Agonizing amount of damage to the enemies to the Left, Right, and Opposition of Gilbert.";
@@ -298,9 +298,9 @@ namespace TevlevsRapscallions
       ability2.visuals = LoadedAssetsHandler.GetCharacterAbility("Huff_1_A").visuals;
       ability2.animationTarget = (BaseCombatTargettingSO) Gilfects.AllGilb;
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
-      ability2.effects[2] = new Effect((EffectSO) Gilfects.Damage, 8, new IntentType?((IntentType) 2), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
-      ability2.effects[1] = new Effect((EffectSO) Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
+      ability2.effects[0] = new Effect( Gilfects.ConsumePig, 6, new IntentType?((IntentType) 61), Slots.Self);
+      ability2.effects[2] = new Effect( Gilfects.Damage, 8, new IntentType?((IntentType) 2), (BaseCombatTargettingSO) Gilfects.FaceOtrGilb);
+      ability2.effects[1] = new Effect( Gilfects.Bash, 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) Gilfects.GilbEny);
       enemy.abilities = new Ability[4]
       {
         ShitBurg.FakeSlap,
@@ -361,29 +361,29 @@ namespace TevlevsRapscallions
       instance3.previousAmount = 2;
       MultiCondition condition1 = MultiCondition.Create(new EffectConditionSO[2]
       {
-        (EffectConditionSO) instance3,
-        (EffectConditionSO) Conditions.Chance(40)
+         instance3,
+         Conditions.Chance(40)
       });
       MultiCondition condition2 = MultiCondition.Create(new EffectConditionSO[2]
       {
-        (EffectConditionSO) instance3,
-        (EffectConditionSO) Conditions.Chance(50)
+         instance3,
+         Conditions.Chance(50)
       });
       MultiCondition condition3 = MultiCondition.Create(new EffectConditionSO[2]
       {
-        (EffectConditionSO) instance3,
-        (EffectConditionSO) Conditions.Chance(60)
+         instance3,
+         Conditions.Chance(60)
       });
       MultiCondition condition4 = MultiCondition.Create(new EffectConditionSO[2]
       {
-        (EffectConditionSO) instance3,
-        (EffectConditionSO) Conditions.Chance(65)
+         instance3,
+         Conditions.Chance(65)
       });
       RestoreSwapUseEffect instance4 = ScriptableObject.CreateInstance<RestoreSwapUseEffect>();
-      Effect effect1 = new Effect((EffectSO) instance4, 1, new IntentType?((IntentType) 40), Slots.Self, (EffectConditionSO) condition1);
-      Effect effect2 = new Effect((EffectSO) instance4, 1, new IntentType?((IntentType) 40), Slots.Self, (EffectConditionSO) condition2);
-      Effect effect3 = new Effect((EffectSO) instance4, 1, new IntentType?((IntentType) 40), Slots.Self, (EffectConditionSO) condition3);
-      Effect effect4 = new Effect((EffectSO) instance4, 1, new IntentType?((IntentType) 40), Slots.Self, (EffectConditionSO) condition4);
+      Effect effect1 = new Effect( instance4, 1, new IntentType?((IntentType) 40), Slots.Self,  condition1);
+      Effect effect2 = new Effect( instance4, 1, new IntentType?((IntentType) 40), Slots.Self,  condition2);
+      Effect effect3 = new Effect( instance4, 1, new IntentType?((IntentType) 40), Slots.Self,  condition3);
+      Effect effect4 = new Effect( instance4, 1, new IntentType?((IntentType) 40), Slots.Self,  condition4);
       Ability ability1 = new Ability();
       ability1.name = "Liquid Pummel";
       ability1.description = "If there is an Opposing enemy, deal 6 damage to them. \nOtherwise, halve this party member's maximum health and summon a Gilbert, refreshing this party member's ability usage if successful.";
@@ -397,13 +397,13 @@ namespace TevlevsRapscallions
       ability1.visuals = LoadedAssetsHandler.GetEnemyAbility("Bash_A").visuals;
       ability1.animationTarget = Slots.Front;
       ability1.effects = new Effect[4];
-      ability1.effects[0] = new Effect((EffectSO) Gilfects.Damage, 6, new IntentType?((IntentType) 1), Slots.Front, (EffectConditionSO) Gilfects.IsFront);
-      ability1.effects[1] = new Effect((EffectSO) Gilfects.HalveMax, 1, new IntentType?((IntentType) 82), Slots.Self, (EffectConditionSO) MultiCondition.Create(new EffectConditionSO[2]
+      ability1.effects[0] = new Effect( Gilfects.Damage, 6, new IntentType?((IntentType) 1), Slots.Front,  Gilfects.IsFront);
+      ability1.effects[1] = new Effect( Gilfects.HalveMax, 1, new IntentType?((IntentType) 82), Slots.Self,  MultiCondition.Create(new EffectConditionSO[2]
       {
-        (EffectConditionSO) instance2,
-        (EffectConditionSO) Gilfects.IsntFront
+         instance2,
+         Gilfects.IsntFront
       }));
-      ability1.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<SpawnGilbertEnemyInSlotFromEntryEffect>(), 0, new IntentType?((IntentType) 83), Slots.Front, (EffectConditionSO) Gilfects.DidThat);
+      ability1.effects[2] = new Effect( ScriptableObject.CreateInstance<SpawnGilbertEnemyInSlotFromEntryEffect>(), 0, new IntentType?((IntentType) 83), Slots.Front,  Gilfects.DidThat);
       ability1.effects[3] = ShitBurg.RefreshDid;
       Ability ability2 = ability1.Duplicate();
       ability2.name = "Liquid Fists";
@@ -432,14 +432,14 @@ namespace TevlevsRapscallions
       ability5.visuals = LoadedAssetsHandler.GetEnemyAbility("Bash_A").visuals;
       ability5.animationTarget = Slots.Front;
       ability5.effects = new Effect[5];
-      ability5.effects[0] = new Effect((EffectSO) Gilfects.Huff, 1, new IntentType?((IntentType) 20), Slots.Self);
-      ability5.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<LeechDamageEffect>(), 3, new IntentType?((IntentType) 1), Slots.Front, (EffectConditionSO) Gilfects.IsFront);
-      ability5.effects[2] = new Effect((EffectSO) Gilfects.HalveMax, 1, new IntentType?((IntentType) 82), Slots.Self, (EffectConditionSO) MultiCondition.Create(new EffectConditionSO[2]
+      ability5.effects[0] = new Effect( Gilfects.Huff, 1, new IntentType?((IntentType) 20), Slots.Self);
+      ability5.effects[1] = new Effect( ScriptableObject.CreateInstance<LeechDamageEffect>(), 3, new IntentType?((IntentType) 1), Slots.Front,  Gilfects.IsFront);
+      ability5.effects[2] = new Effect( Gilfects.HalveMax, 1, new IntentType?((IntentType) 82), Slots.Self,  MultiCondition.Create(new EffectConditionSO[2]
       {
-        (EffectConditionSO) instance2,
-        (EffectConditionSO) Gilfects.IsntFront
+         instance2,
+         Gilfects.IsntFront
       }));
-      ability5.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<SpawnGilbertEnemyInSlotFromEntryEffect>(), 0, new IntentType?((IntentType) 83), Slots.Front, (EffectConditionSO) Gilfects.DidThat);
+      ability5.effects[3] = new Effect( ScriptableObject.CreateInstance<SpawnGilbertEnemyInSlotFromEntryEffect>(), 0, new IntentType?((IntentType) 83), Slots.Front,  Gilfects.DidThat);
       ability5.effects[4] = ShitBurg.RefreshDid;
       Ability ability6 = ability5.Duplicate();
       ability6.name = "Baloooo Vavedour";
@@ -473,20 +473,20 @@ namespace TevlevsRapscallions
       ability9.visuals = LoadedAssetsHandler.GetCharacterAbility("Amalgam_1_A").visuals;
       ability9.animationTarget = (BaseCombatTargettingSO) MultiTargetting.Create(Slots.Self, (BaseCombatTargettingSO) ScriptableObject.CreateInstance<ConditionTargettingByGilbert>());
       ability9.effects = new Effect[5];
-      ability9.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<ChangeMaxHealthEffect>(), 1, new IntentType?((IntentType) 81), Slots.Self);
-      ability9.effects[1] = new Effect((EffectSO) Gilfects.Empty, 0, new IntentType?((IntentType) 100), Slots.Front);
-      ability9.effects[2] = new Effect((EffectSO) Gilfects.Empty, 0, new IntentType?((IntentType) 6), (BaseCombatTargettingSO) Gilfects.GilbEny);
-      ability9.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageByGilbertEffect>(), 1, new IntentType?((IntentType) 4), Slots.Front);
-      ability9.effects[4] = new Effect((EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability9.effects[0] = new Effect( ScriptableObject.CreateInstance<ChangeMaxHealthEffect>(), 1, new IntentType?((IntentType) 81), Slots.Self);
+      ability9.effects[1] = new Effect( Gilfects.Empty, 0, new IntentType?((IntentType) 100), Slots.Front);
+      ability9.effects[2] = new Effect( Gilfects.Empty, 0, new IntentType?((IntentType) 6), (BaseCombatTargettingSO) Gilfects.GilbEny);
+      ability9.effects[3] = new Effect( ScriptableObject.CreateInstance<DamageByGilbertEffect>(), 1, new IntentType?((IntentType) 4), Slots.Front);
+      ability9.effects[4] = new Effect( CasterRootActionEffect.Create(new Effect[1]
       {
-        new Effect((EffectSO) Gilfects.HealNorm, 4, new IntentType?(), Slots.Self)
+        new Effect( Gilfects.HealNorm, 4, new IntentType?(), Slots.Self)
       }), 1, new IntentType?((IntentType) 20), Slots.Self);
       Ability ability10 = ability9.Duplicate();
       ability10.name = "Fluids Pyre";
       ability10.description = "Increase this party member's maximum health by 1. \nIf the Opposing enemy is not Gilbert, destroy all Gilberts and deal damage to the Opposing enemy equivalent to the combined maximum health of all Gilberts destroyed. \nHeal this party member 5 health.";
-      ability10.effects[4]._effect = (EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability10.effects[4]._effect =  CasterRootActionEffect.Create(new Effect[1]
       {
-        new Effect((EffectSO) Gilfects.HealNorm, 5, new IntentType?(), Slots.Self)
+        new Effect( Gilfects.HealNorm, 5, new IntentType?(), Slots.Self)
       });
       ability10.effects[4]._intent = new IntentType?((IntentType) 21);
       Ability ability11 = ability10.Duplicate();
@@ -494,17 +494,17 @@ namespace TevlevsRapscallions
       ability11.description = "Increase this party member's maximum health by 2. \nIf the Opposing enemy is not Gilbert, destroy all Gilberts and deal damage to the Opposing enemy equivalent to the combined maximum health of all Gilberts destroyed. \nHeal this party member 6 health.";
       ability11.effects[0]._entryVariable = 2;
       ability11.effects[3]._intent = new IntentType?((IntentType) 5);
-      ability11.effects[4]._effect = (EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability11.effects[4]._effect =  CasterRootActionEffect.Create(new Effect[1]
       {
-        new Effect((EffectSO) Gilfects.HealNorm, 6, new IntentType?(), Slots.Self)
+        new Effect( Gilfects.HealNorm, 6, new IntentType?(), Slots.Self)
       });
       Ability ability12 = ability11.Duplicate();
       ability12.name = "Funeral Pyre";
       ability12.description = "Increase this party member's maximum health by 3. \nIf the Opposing enemy is not Gilbert, destroy all Gilberts and deal damage to the Opposing enemy equivalent to the combined maximum health of all Gilberts destroyed. \nHeal this party member 7 health.";
       ability12.effects[0]._entryVariable = 3;
-      ability12.effects[4]._effect = (EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability12.effects[4]._effect =  CasterRootActionEffect.Create(new Effect[1]
       {
-        new Effect((EffectSO) Gilfects.HealNorm, 7, new IntentType?(), Slots.Self)
+        new Effect( Gilfects.HealNorm, 7, new IntentType?(), Slots.Self)
       });
       character.AddLevel(16, new Ability[3]
       {
@@ -569,8 +569,8 @@ namespace TevlevsRapscallions
           ShitBurg._fakeSlap.visuals = LoadedAssetsHandler.GetCharacterAbility("Slap_A").visuals;
           ShitBurg._fakeSlap.animationTarget = Slots.Self;
           ShitBurg._fakeSlap.effects = new Effect[2];
-          ShitBurg._fakeSlap.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<PerformRandomAbilityEnemyEffect>(), 1, new IntentType?((IntentType) 100), Slots.Self);
-          ShitBurg._fakeSlap.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?(), Slots.Self);
+          ShitBurg._fakeSlap.effects[0] = new Effect( ScriptableObject.CreateInstance<PerformRandomAbilityEnemyEffect>(), 1, new IntentType?((IntentType) 100), Slots.Self);
+          ShitBurg._fakeSlap.effects[1] = new Effect( ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?(), Slots.Self);
         }
         return ShitBurg._fakeSlap;
       }
@@ -616,11 +616,11 @@ namespace TevlevsRapscallions
           ShitBurg._schizoid.visuals = LoadedAssetsHandler.GetCharacterAbility("Amalgam_1_A").visuals;
           ShitBurg._schizoid.animationTarget = Slots.Self;
           ShitBurg._schizoid.effects = new Effect[5];
-          ShitBurg._schizoid.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyFocusedEffect>(), 1, new IntentType?((IntentType) 156), Slots.Self);
-          ShitBurg._schizoid.effects[3] = new Effect((EffectSO) Gilfects.HalveMax, 1, new IntentType?((IntentType) 82), Slots.Self, (EffectConditionSO) ScriptableObject.CreateInstance<IsEnemySpaceCondition>());
-          ShitBurg._schizoid.effects[4] = new Effect((EffectSO) ScriptableObject.CreateInstance<SpawnSelfGilbertEnemyAnywhereEffect>(), 1, new IntentType?((IntentType) 83), Slots.Self, (EffectConditionSO) Gilfects.DidThat);
-          ShitBurg._schizoid.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ChangeMaxHealthEffect>(), 1, new IntentType?((IntentType) 81), Slots.Self);
-          ShitBurg._schizoid.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ChangeMaxHealthEffect>(), 1, new IntentType?(), Slots.Self, (EffectConditionSO) Conditions.Chance(50));
+          ShitBurg._schizoid.effects[0] = new Effect( ScriptableObject.CreateInstance<ApplyFocusedEffect>(), 1, new IntentType?((IntentType) 156), Slots.Self);
+          ShitBurg._schizoid.effects[3] = new Effect( Gilfects.HalveMax, 1, new IntentType?((IntentType) 82), Slots.Self,  ScriptableObject.CreateInstance<IsEnemySpaceCondition>());
+          ShitBurg._schizoid.effects[4] = new Effect( ScriptableObject.CreateInstance<SpawnSelfGilbertEnemyAnywhereEffect>(), 1, new IntentType?((IntentType) 83), Slots.Self,  Gilfects.DidThat);
+          ShitBurg._schizoid.effects[1] = new Effect( ScriptableObject.CreateInstance<ChangeMaxHealthEffect>(), 1, new IntentType?((IntentType) 81), Slots.Self);
+          ShitBurg._schizoid.effects[2] = new Effect( ScriptableObject.CreateInstance<ChangeMaxHealthEffect>(), 1, new IntentType?(), Slots.Self,  Conditions.Chance(50));
         }
         return ShitBurg._schizoid;
       }
@@ -662,7 +662,7 @@ namespace TevlevsRapscallions
       {
         if (!ShitBurg._rdMade)
         {
-          ShitBurg._refreshDid = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 100), Slots.Self, (EffectConditionSO) Gilfects.DidThat);
+          ShitBurg._refreshDid = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 100), Slots.Self,  Gilfects.DidThat);
           ShitBurg._rdMade = true;
         }
         return ShitBurg._refreshDid;

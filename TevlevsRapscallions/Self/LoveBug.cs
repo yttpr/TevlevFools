@@ -100,7 +100,6 @@ namespace TevlevsRapscallions
             ability.description = "Move Left or Right.\nDeal 4 damage to the Opposing enemy and apply parasitism for the amount of damage done.\nAttempt to return to the original position.";
             ability.cost = new ManaColorSO[]
             {
-                Pigments.Red,
                 Pigments.Yellow
             };
             ability.effects = new Effect[3];
@@ -115,8 +114,7 @@ namespace TevlevsRapscallions
             ability2.description = "Move Left or Right.\nDeal 6 damage to the Opposing enemy and apply parasitism for the amount of damage done.\nAttempt to return to the original position.";
             ability2.cost = new ManaColorSO[]
             {
-                Pigments.Red,
-                Pigments.Yellow
+                Pigments.SplitPigment(Pigments.Red, Pigments.Yellow)
             };
             ability2.effects = new Effect[3];
             ability2.effects[0] = new Effect(ScriptableObject.CreateInstance<SwapToSidesReturnCurrentSlotEffect>(), 1, new IntentType?((IntentType)40), Slots.Self, null);
@@ -130,8 +128,7 @@ namespace TevlevsRapscallions
             ability3.description = "Move Left or Right.\nDeal 8 damage to the Opposing enemy and apply parasitism for the amount of damage done.\nAttempt to return to the original position.";
             ability3.cost = new ManaColorSO[]
             {
-                Pigments.Red,
-                Pigments.Yellow
+                Pigments.SplitPigment(Pigments.Red, Pigments.Yellow)
             };
             ability3.effects = new Effect[3];
             ability3.effects[0] = new Effect(ScriptableObject.CreateInstance<SwapToSidesReturnCurrentSlotEffect>(), 1, new IntentType?((IntentType)40), Slots.Self, null);
@@ -145,8 +142,7 @@ namespace TevlevsRapscallions
             ability4.description = "Move Left or Right.\nDeal 9 damage to the Opposing enemy and apply parasitism for the amount of damage done.\nAttempt to return to the original position.";
             ability4.cost = new ManaColorSO[]
             {
-                Pigments.Red,
-                Pigments.Yellow
+                Pigments.SplitPigment(Pigments.Red, Pigments.Yellow)
             };
             ability4.effects = new Effect[3];
             ability4.effects[0] = new Effect(ScriptableObject.CreateInstance<SwapToSidesReturnCurrentSlotEffect>(), 1, new IntentType?((IntentType)40), Slots.Self, null);

@@ -27,7 +27,7 @@ namespace TevlevsRapscallions
       ((BasePassiveAbilitySO) instance).conditions = new EffectorConditionSO[0];
       instance.connectionEffects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<AddExtraAbilitiesEffect>(), 3, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<AddExtraAbilitiesEffect>(), 3, new IntentType?(), Slots.Self)
       });
       instance.disconnectionEffects = new EffectInfo[0];
       Character character = new Character()

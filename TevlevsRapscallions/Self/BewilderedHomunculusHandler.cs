@@ -76,8 +76,8 @@ namespace TevlevsRapscallions
       ability2.visuals = (AttackVisualsSO) null;
       ability2.animationTarget = Slots.Self;
       ability2.effects = new Effect[2];
-      ability2.effects[0] = new Effect((EffectSO) EZEffects.GetVisuals<HalfMaxHealthDamageRandomEffect>("Crush_A", false, Slots.Self), 1, new IntentType?((IntentType) 2), (BaseCombatTargettingSO) EZEffects.TargetSide<TargettingBy_NotGilbert>(true, false));
-      ability2.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DirectDeathEffect>(), 1, new IntentType?((IntentType) 6), Slots.Self);
+      ability2.effects[0] = new Effect( EZEffects.GetVisuals<HalfMaxHealthDamageRandomEffect>("Crush_A", false, Slots.Self), 1, new IntentType?((IntentType) 2), (BaseCombatTargettingSO) EZEffects.TargetSide<TargettingBy_NotGilbert>(true, false));
+      ability2.effects[1] = new Effect( ScriptableObject.CreateInstance<DirectDeathEffect>(), 1, new IntentType?((IntentType) 6), Slots.Self);
       enemy.abilities = new Ability[2]{ ability1, ability2 };
       enemy.AddEnemy();
       IDetour idetour = (IDetour) new Hook((MethodBase) typeof (EnemyCombat).GetMethod("EnemyDeath", ~BindingFlags.Default), typeof (BewilderedHomunculusHandler).GetMethod("EnemyDeath", ~BindingFlags.Default));

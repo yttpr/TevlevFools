@@ -32,7 +32,8 @@ namespace TevlevsRapscallions
       TargetSlotInfo random = list.GetRandom<TargetSlotInfo>();
       int num;
       base.PerformEffect(stats, caster, random.SelfArray<TargetSlotInfo>(), areTargetSlots, 1, out num);
-      exitAmount += random.Unit.Damage((int) Math.Ceiling((double) caster.MaximumHealth / 2.0), (IUnit) null, (DeathType) 1, -1, false, false, true, (DamageType) 0).damageAmount;
+      exitAmount += random.Unit.Damage(caster.WillApplyDamage((int)Math.Ceiling((double)caster.MaximumHealth / 2.0), random.Unit), (IUnit) null, (DeathType) 1, -1, true, true, false).damageAmount;
+            caster.DidApplyDamage(exitAmount);
       return exitAmount > 0;
     }
   }

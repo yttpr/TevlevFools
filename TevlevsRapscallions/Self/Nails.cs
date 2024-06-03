@@ -51,9 +51,9 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability1.effects = new Effect[3];
-      ability1.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 2, new IntentType?((IntentType) 0), AllySlots.Left);
-      ability1.effects[1] = new Effect((EffectSO) instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
-      ability1.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
+      ability1.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 2, new IntentType?((IntentType) 0), AllySlots.Left);
+      ability1.effects[1] = new Effect( instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
+      ability1.effects[2] = new Effect( ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
       ability1.animationTarget = AllySlots.Left;
       ability1.visuals = LoadedAssetsHandler.GetCharcater("Fennec_CH").rankedData[0].rankAbilities[1].ability.visuals;
       Ability ability2 = new Ability();
@@ -66,9 +66,9 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 3, new IntentType?((IntentType) 1), AllySlots.Left);
-      ability2.effects[1] = new Effect((EffectSO) instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
-      ability2.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
+      ability2.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 3, new IntentType?((IntentType) 1), AllySlots.Left);
+      ability2.effects[1] = new Effect( instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
+      ability2.effects[2] = new Effect( ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
       ability2.animationTarget = AllySlots.Left;
       ability2.visuals = LoadedAssetsHandler.GetCharcater("Fennec_CH").rankedData[0].rankAbilities[1].ability.visuals;
       ScriptableObject.CreateInstance<ApplyScarsIfRutpuredEffect>()._NailsRandomEffect = true;
@@ -82,9 +82,9 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability3.effects = new Effect[3];
-      ability3.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 5, new IntentType?((IntentType) 1), AllySlots.Left);
-      ability3.effects[1] = new Effect((EffectSO) instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
-      ability3.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
+      ability3.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 5, new IntentType?((IntentType) 1), AllySlots.Left);
+      ability3.effects[1] = new Effect( instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
+      ability3.effects[2] = new Effect( ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
       ability3.animationTarget = AllySlots.Left;
       ability3.visuals = LoadedAssetsHandler.GetCharcater("Fennec_CH").rankedData[0].rankAbilities[1].ability.visuals;
       Ability ability4 = new Ability();
@@ -97,9 +97,9 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability4.effects = new Effect[3];
-      ability4.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 6, new IntentType?((IntentType) 1), AllySlots.Left);
-      ability4.effects[1] = new Effect((EffectSO) instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
-      ability4.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
+      ability4.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 6, new IntentType?((IntentType) 1), AllySlots.Left);
+      ability4.effects[1] = new Effect( instance, 1, new IntentType?((IntentType) 20), AllySlots.SelfLeft);
+      ability4.effects[2] = new Effect( ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), AllySlots.Left);
       ability4.animationTarget = AllySlots.Left;
       ability4.visuals = LoadedAssetsHandler.GetCharcater("Fennec_CH").rankedData[0].rankAbilities[1].ability.visuals;
       Ability ability5 = new Ability();
@@ -112,19 +112,19 @@ namespace TevlevsRapscallions
         Pigments.Purple
       };
       ability5.effects = new Effect[4];
-      ability5.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
+      ability5.effects[0] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability5.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
+      ability5.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability5.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
+      ability5.effects[2] = new Effect( ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability5.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(20));
+      ability5.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(20));
       ability5.animationTarget = Slots.Front;
       ability5.visuals = LoadedAssetsHandler.GetCharcater("Clive_CH").rankedData[0].rankAbilities[0].ability.visuals;
       Ability ability6 = new Ability();
@@ -137,19 +137,19 @@ namespace TevlevsRapscallions
         Pigments.Purple
       };
       ability6.effects = new Effect[4];
-      ability6.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
+      ability6.effects[0] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability6.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
+      ability6.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability6.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
+      ability6.effects[2] = new Effect( ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability6.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(25));
+      ability6.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(25));
       ability6.animationTarget = Slots.SlotTarget(new int[1]
       {
         1
@@ -165,19 +165,19 @@ namespace TevlevsRapscallions
         Pigments.Purple
       };
       ability7.effects = new Effect[4];
-      ability7.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
+      ability7.effects[0] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability7.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
+      ability7.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability7.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
+      ability7.effects[2] = new Effect( ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability7.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(30));
+      ability7.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(30));
       ability7.animationTarget = Slots.SlotTarget(new int[1]
       {
         1
@@ -193,19 +193,19 @@ namespace TevlevsRapscallions
         Pigments.Purple
       };
       ability8.effects = new Effect[4];
-      ability8.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
+      ability8.effects[0] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability8.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
+      ability8.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyScarsEffect>(), 1, new IntentType?((IntentType) 159), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability8.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
+      ability8.effects[2] = new Effect( ScriptableObject.CreateInstance<HealBasedOnStatusEffect>(), 1, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[1]
       {
         1
       }, true));
-      ability8.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(40));
+      ability8.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(40));
       ability8.animationTarget = Slots.SlotTarget(new int[1]
       {
         1
@@ -221,9 +221,9 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability9.effects = new Effect[4];
-      ability9.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), AllySlots.LeftRight);
-      ability9.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 1, new IntentType?(), Slots.Self);
-      ability9.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 2, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
+      ability9.effects[0] = new Effect( ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), AllySlots.LeftRight);
+      ability9.effects[1] = new Effect( ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 1, new IntentType?(), Slots.Self);
+      ability9.effects[2] = new Effect( ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 2, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -235,7 +235,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability9.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(30));
+      ability9.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(30));
       ability9.animationTarget = Slots.SlotTarget(new int[2]
       {
         -1,
@@ -252,7 +252,7 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability10.effects = new Effect[4];
-      ability10.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[9]
+      ability10.effects[0] = new Effect( ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -264,8 +264,8 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability10.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 2, new IntentType?(), Slots.Self);
-      ability10.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 3, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
+      ability10.effects[1] = new Effect( ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 2, new IntentType?(), Slots.Self);
+      ability10.effects[2] = new Effect( ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 3, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -277,7 +277,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability10.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(35));
+      ability10.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(35));
       ability10.animationTarget = Slots.SlotTarget(new int[2]
       {
         -1,
@@ -294,7 +294,7 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability11.effects = new Effect[4];
-      ability11.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[9]
+      ability11.effects[0] = new Effect( ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -306,8 +306,8 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability11.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 2, new IntentType?(), Slots.Self);
-      ability11.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 4, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
+      ability11.effects[1] = new Effect( ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 2, new IntentType?(), Slots.Self);
+      ability11.effects[2] = new Effect( ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 4, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -319,7 +319,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability11.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(40));
+      ability11.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(40));
       ability11.animationTarget = Slots.SlotTarget(new int[2]
       {
         -1,
@@ -336,14 +336,14 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability12.effects = new Effect[4];
-      ability12.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[3]
+      ability12.effects[0] = new Effect( ScriptableObject.CreateInstance<RestoreSwapUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.SlotTarget(new int[3]
       {
         -1,
         0,
         1
       }, true));
-      ability12.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 2, new IntentType?(), Slots.Self);
-      ability12.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 6, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
+      ability12.effects[1] = new Effect( ScriptableObject.CreateInstance<ExitValueSetterEffect>(), 2, new IntentType?(), Slots.Self);
+      ability12.effects[2] = new Effect( ScriptableObject.CreateInstance<RandomHealBetweenPreviousAndEntryEffect>(), 6, new IntentType?((IntentType) 20), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -355,7 +355,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability12.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(50));
+      ability12.effects[3] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(50));
       ability12.animationTarget = Slots.SlotTarget(new int[2]
       {
         -1,

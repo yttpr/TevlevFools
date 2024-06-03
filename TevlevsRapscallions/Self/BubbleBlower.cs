@@ -32,7 +32,7 @@ namespace TevlevsRapscallions
       };
       instance1.effects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) instance2, 1, new IntentType?(), Slots.Self)
+        new Effect( instance2, 1, new IntentType?(), Slots.Self)
       });
       RefreshIfStoredValueNotZero instance3 = ScriptableObject.CreateInstance<RefreshIfStoredValueNotZero>();
       instance3._valueName = (UnitStoredValueNames) 77889;
@@ -43,7 +43,7 @@ namespace TevlevsRapscallions
       };
       instance1._secondEffects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) instance3, 1, new IntentType?(), Slots.Self)
+        new Effect( instance3, 1, new IntentType?(), Slots.Self)
       });
       ((BasePassiveAbilitySO) instance1).doesPassiveTriggerInformationPanel = false;
       instance1._secondDoesPerformPopUp = false;
@@ -87,10 +87,10 @@ namespace TevlevsRapscallions
         Pigments.Gray
       };
       ability1.effects = new Effect[4];
-      ability1.effects[0] = new Effect((EffectSO) instance4, 1, new IntentType?((IntentType) 76443), AllySlots.Left);
-      ability1.effects[1] = new Effect((EffectSO) instance6, 1, new IntentType?((IntentType) 212), AllySlots.Left);
-      ability1.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), AllySlots.AllPartyMembers);
-      ability1.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), Slots.SlotTarget(new int[9]
+      ability1.effects[0] = new Effect( instance4, 1, new IntentType?((IntentType) 76443), AllySlots.Left);
+      ability1.effects[1] = new Effect( instance6, 1, new IntentType?((IntentType) 212), AllySlots.Left);
+      ability1.effects[2] = new Effect( ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), AllySlots.AllPartyMembers);
+      ability1.effects[3] = new Effect( ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -114,10 +114,10 @@ namespace TevlevsRapscallions
         Pigments.Gray
       };
       ability2.effects = new Effect[4];
-      ability2.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyBubblesEffect>(), 2, new IntentType?((IntentType) 76443), AllySlots.Left);
-      ability2.effects[1] = new Effect((EffectSO) instance6, 1, new IntentType?((IntentType) 212), AllySlots.Left);
-      ability2.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), AllySlots.AllPartyMembers);
-      ability2.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), Slots.SlotTarget(new int[9]
+      ability2.effects[0] = new Effect( ScriptableObject.CreateInstance<ApplyBubblesEffect>(), 2, new IntentType?((IntentType) 76443), AllySlots.Left);
+      ability2.effects[1] = new Effect( instance6, 1, new IntentType?((IntentType) 212), AllySlots.Left);
+      ability2.effects[2] = new Effect( ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), AllySlots.AllPartyMembers);
+      ability2.effects[3] = new Effect( ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 1, new IntentType?((IntentType) 104), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -159,10 +159,10 @@ namespace TevlevsRapscallions
         Pigments.Gray
       };
       ability5.effects = new Effect[4];
-      ability5.effects[0] = new Effect((EffectSO) instance4, 1, new IntentType?((IntentType) 76443), Slots.Front);
-      ability5.effects[1] = new Effect((EffectSO) instance8, 1, new IntentType?((IntentType) 42), (BaseCombatTargettingSO) instance10);
-      ability5.effects[2] = new Effect((EffectSO) instance7, 1, new IntentType?((IntentType) 41), (BaseCombatTargettingSO) instance9);
-      ability5.effects[3] = new Effect((EffectSO) instance5, 1, new IntentType?((IntentType) 104), ExtendedSlots.AllEnemies);
+      ability5.effects[0] = new Effect( instance4, 1, new IntentType?((IntentType) 76443), Slots.Front);
+      ability5.effects[1] = new Effect( instance8, 1, new IntentType?((IntentType) 42), (BaseCombatTargettingSO) instance10);
+      ability5.effects[2] = new Effect( instance7, 1, new IntentType?((IntentType) 41), (BaseCombatTargettingSO) instance9);
+      ability5.effects[3] = new Effect( instance5, 1, new IntentType?((IntentType) 104), ExtendedSlots.AllEnemies);
       ability5.animationTarget = Slots.Front;
       ability5.visuals = LoadedAssetsHandler.GetCharacterAbility("Oil_1_A").visuals;
       Ability ability6 = new Ability();
@@ -175,10 +175,10 @@ namespace TevlevsRapscallions
         Pigments.Gray
       };
       ability6.effects = new Effect[4];
-      ability6.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyBubblesEffect>(), 2, new IntentType?((IntentType) 76443), Slots.Front);
-      ability6.effects[1] = new Effect((EffectSO) instance8, 1, new IntentType?((IntentType) 42), (BaseCombatTargettingSO) instance10);
-      ability6.effects[2] = new Effect((EffectSO) instance7, 1, new IntentType?((IntentType) 41), (BaseCombatTargettingSO) instance9);
-      ability6.effects[3] = new Effect((EffectSO) ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 2, new IntentType?((IntentType) 104), ExtendedSlots.AllEnemies);
+      ability6.effects[0] = new Effect( ScriptableObject.CreateInstance<ApplyBubblesEffect>(), 2, new IntentType?((IntentType) 76443), Slots.Front);
+      ability6.effects[1] = new Effect( instance8, 1, new IntentType?((IntentType) 42), (BaseCombatTargettingSO) instance10);
+      ability6.effects[2] = new Effect( instance7, 1, new IntentType?((IntentType) 41), (BaseCombatTargettingSO) instance9);
+      ability6.effects[3] = new Effect( ScriptableObject.CreateInstance<IncreaseBubblesEffect>(), 2, new IntentType?((IntentType) 104), ExtendedSlots.AllEnemies);
       ability6.animationTarget = Slots.Front;
       ability6.visuals = LoadedAssetsHandler.GetCharacterAbility("Oil_1_A").visuals;
       Ability ability7 = ability6.Duplicate();
@@ -223,13 +223,13 @@ namespace TevlevsRapscallions
         Pigments.Gray
       };
       ability9.effects = new Effect[3];
-      ability9.effects[0] = new Effect((EffectSO) instance11, 1, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
-      ability9.effects[1] = new Effect((EffectSO) instance11, 1, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
+      ability9.effects[0] = new Effect( instance11, 1, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
+      ability9.effects[1] = new Effect( instance11, 1, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
       {
         -1,
         1
       }, true));
-      ability9.effects[2] = new Effect((EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability9.effects[2] = new Effect( CasterRootActionEffect.Create(new Effect[1]
       {
         new Effect(ability9.effects[1]._effect, 1, new IntentType?((IntentType) 76443), Slots.Self)
       }), 1, new IntentType?((IntentType) 76443), Slots.Self);
@@ -243,13 +243,13 @@ namespace TevlevsRapscallions
       Ability ability10 = ability9.Duplicate();
       ability10.name = "Rainy Dusk";
       ability10.description = "60% chance to Inflict 1-2 Bubbles to the Left, Right, and Opposing Enemies and Ally positions.";
-      ability10.effects[0] = new Effect((EffectSO) instance12, 1, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
-      ability10.effects[1] = new Effect((EffectSO) instance12, 1, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
+      ability10.effects[0] = new Effect( instance12, 1, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
+      ability10.effects[1] = new Effect( instance12, 1, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
       {
         -1,
         1
       }, true));
-      ability10.effects[2] = new Effect((EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability10.effects[2] = new Effect( CasterRootActionEffect.Create(new Effect[1]
       {
         new Effect(ability10.effects[1]._effect, 1, new IntentType?((IntentType) 76443), Slots.Self)
       }), 1, new IntentType?((IntentType) 76443), Slots.Self);
@@ -264,13 +264,13 @@ namespace TevlevsRapscallions
         Pigments.Gray
       };
       ability11.effects = new Effect[3];
-      ability11.effects[0] = new Effect((EffectSO) instance13, 2, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
-      ability11.effects[1] = new Effect((EffectSO) instance13, 2, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
+      ability11.effects[0] = new Effect( instance13, 2, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
+      ability11.effects[1] = new Effect( instance13, 2, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
       {
         -1,
         1
       }, true));
-      ability11.effects[2] = new Effect((EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability11.effects[2] = new Effect( CasterRootActionEffect.Create(new Effect[1]
       {
         new Effect(ability11.effects[1]._effect, 2, new IntentType?((IntentType) 76443), Slots.Self)
       }), 2, new IntentType?((IntentType) 76443), Slots.Self);
@@ -284,13 +284,13 @@ namespace TevlevsRapscallions
       Ability ability12 = ability9.Duplicate();
       ability12.name = "Rainy Eternity";
       ability12.description = "99% chance to Inflict 2-3 Bubbles to the Left, Right, and Opposing Enemies and Ally positions.";
-      ability12.effects[0] = new Effect((EffectSO) instance14, 2, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
-      ability12.effects[1] = new Effect((EffectSO) instance14, 2, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
+      ability12.effects[0] = new Effect( instance14, 2, new IntentType?((IntentType) 76443), Slots.FrontLeftRight);
+      ability12.effects[1] = new Effect( instance14, 2, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[2]
       {
         -1,
         1
       }, true));
-      ability12.effects[2] = new Effect((EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability12.effects[2] = new Effect( CasterRootActionEffect.Create(new Effect[1]
       {
         new Effect(ability12.effects[1]._effect, 2, new IntentType?((IntentType) 76443), Slots.Self)
       }), 2, new IntentType?((IntentType) 76443), Slots.Self);

@@ -50,7 +50,7 @@ namespace TevlevsRapscallions
                 ResourceLoader.LoadSprite("BrianBackDamaged3.png"),
             };
             character.extraSprites = brian;
-            SetCasterExtraSpritesEffect hitt = ScriptableObject.CreateInstance<SetCasterExtraSpritesEffect>();
+            SetCasterExtraSpritesIfTargetConstrictedEffect hitt = ScriptableObject.CreateInstance<SetCasterExtraSpritesIfTargetConstrictedEffect>();
             hitt._spriteType = (ExtraSpriteType)8384012;
 
             Ability ability1 = new Ability();
@@ -63,9 +63,9 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability1.effects = new Effect[3];
-      ability1.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 3, new IntentType?((IntentType) 1), Slots.Front);
-      ability1.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 3, new IntentType?((IntentType) 1), Slots.Front);
-      ability1.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 2, new IntentType?((IntentType) 170), Slots.Front);
+      ability1.effects[0] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 3, new IntentType?((IntentType) 1), Slots.Front);
+      ability1.effects[1] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 3, new IntentType?((IntentType) 1), Slots.Front);
+      ability1.effects[2] = new Effect( ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 2, new IntentType?((IntentType) 170), Slots.Front);
       ability1.animationTarget = Slots.Front;
       ability1.visuals = LoadedAssetsHandler.GetCharcater("Anton_CH").rankedData[0].rankAbilities[1].ability.visuals;
       ScriptableObject.CreateInstance<AppyConstrictedSlotRandomRangeEffect>().minrange = 2;
@@ -79,9 +79,9 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 4, new IntentType?((IntentType) 1), Slots.Front);
-      ability2.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 4, new IntentType?((IntentType) 1), Slots.Front);
-      ability2.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 2, new IntentType?((IntentType) 170), Slots.Front);
+      ability2.effects[0] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 4, new IntentType?((IntentType) 1), Slots.Front);
+      ability2.effects[1] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 4, new IntentType?((IntentType) 1), Slots.Front);
+      ability2.effects[2] = new Effect( ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 2, new IntentType?((IntentType) 170), Slots.Front);
       ability2.animationTarget = Slots.Front;
       ability2.visuals = LoadedAssetsHandler.GetCharcater("Anton_CH").rankedData[0].rankAbilities[1].ability.visuals;
       Ability ability3 = new Ability();
@@ -94,9 +94,9 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability3.effects = new Effect[3];
-      ability3.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 5, new IntentType?((IntentType) 1), Slots.Front);
-      ability3.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 5, new IntentType?((IntentType) 1), Slots.Front);
-      ability3.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 3, new IntentType?((IntentType) 170), Slots.Front);
+      ability3.effects[0] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 5, new IntentType?((IntentType) 1), Slots.Front);
+      ability3.effects[1] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 5, new IntentType?((IntentType) 1), Slots.Front);
+      ability3.effects[2] = new Effect( ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 3, new IntentType?((IntentType) 170), Slots.Front);
       ability3.animationTarget = Slots.Front;
       ability3.visuals = LoadedAssetsHandler.GetCharcater("Anton_CH").rankedData[0].rankAbilities[1].ability.visuals;
       ScriptableObject.CreateInstance<AppyConstrictedSlotRandomRangeEffect>().minrange = 3;
@@ -110,9 +110,9 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability4.effects = new Effect[3];
-      ability4.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 6, new IntentType?((IntentType) 1), Slots.Front);
-      ability4.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 6, new IntentType?((IntentType) 1), Slots.Front);
-      ability4.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 3, new IntentType?((IntentType) 170), Slots.Front);
+      ability4.effects[0] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 6, new IntentType?((IntentType) 1), Slots.Front);
+      ability4.effects[1] = new Effect( ScriptableObject.CreateInstance<MoreDamageIfConstrictedEffect>(), 6, new IntentType?((IntentType) 1), Slots.Front);
+      ability4.effects[2] = new Effect( ScriptableObject.CreateInstance<ApplyConstrictedSlotEffect>(), 3, new IntentType?((IntentType) 170), Slots.Front);
       ability4.animationTarget = Slots.Front;
       ability4.visuals = LoadedAssetsHandler.GetCharcater("Anton_CH").rankedData[0].rankAbilities[1].ability.visuals;
       Ability ability5 = new Ability();
@@ -126,7 +126,7 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability5.effects = new Effect[2];
-      ability5.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
+      ability5.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
             ability5.effects[1] = new Effect(hitt, 1, null, Slots.Front);
       ability5.animationTarget = Slots.Front;
       ability5.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
@@ -141,7 +141,7 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability6.effects = new Effect[2];
-      ability6.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
+      ability6.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
             ability6.effects[1] = new Effect(hitt, 1, null, Slots.Front);
             ability6.animationTarget = Slots.Front;
       ability6.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
@@ -156,7 +156,7 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability7.effects = new Effect[2];
-      ability7.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
+      ability7.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
             ability7.effects[1] = new Effect(hitt, 1, null, Slots.Front);
             ability7.animationTarget = Slots.Front;
       ability7.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
@@ -171,7 +171,7 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability8.effects = new Effect[2];
-      ability8.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
+      ability8.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageBasedOnHealthIfConstrictedEffect>(), 0, new IntentType?((IntentType) 5), Slots.Front);
             ability8.effects[1] = new Effect(hitt, 1, null, Slots.Front);
             ability8.animationTarget = Slots.Front;
       ability8.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[2].ability.visuals;
@@ -197,8 +197,8 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability9.effects = new Effect[3];
-      ability9.effects[0] = new Effect((EffectSO) instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
-      ability9.effects[1] = new Effect((EffectSO) instance2, 6, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
+      ability9.effects[0] = new Effect( instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
+      ability9.effects[1] = new Effect( instance2, 6, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -210,7 +210,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability9.effects[2] = new Effect((EffectSO) instance1, 2, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
+      ability9.effects[2] = new Effect( instance1, 2, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -234,8 +234,8 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability10.effects = new Effect[3];
-      ability10.effects[0] = new Effect((EffectSO) instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
-      ability10.effects[1] = new Effect((EffectSO) instance2, 8, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
+      ability10.effects[0] = new Effect( instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
+      ability10.effects[1] = new Effect( instance2, 8, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -247,7 +247,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability10.effects[2] = new Effect((EffectSO) instance1, 2, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
+      ability10.effects[2] = new Effect( instance1, 2, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -271,8 +271,8 @@ namespace TevlevsRapscallions
         Pigments.SplitPigment(Pigments.Red, Pigments.Blue)
       };
       ability11.effects = new Effect[3];
-      ability11.effects[0] = new Effect((EffectSO) instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
-      ability11.effects[1] = new Effect((EffectSO) instance2, 10, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
+      ability11.effects[0] = new Effect( instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
+      ability11.effects[1] = new Effect( instance2, 10, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -284,7 +284,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability11.effects[2] = new Effect((EffectSO) instance1, 2, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
+      ability11.effects[2] = new Effect( instance1, 2, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -308,8 +308,8 @@ namespace TevlevsRapscallions
         Pigments.SplitPigment(Pigments.Red, Pigments.Blue)
       };
       ability12.effects = new Effect[3];
-      ability12.effects[0] = new Effect((EffectSO) instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
-      ability12.effects[1] = new Effect((EffectSO) instance2, 12, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
+      ability12.effects[0] = new Effect( instance3, 1, new IntentType?((IntentType) 62), Slots.Self);
+      ability12.effects[1] = new Effect( instance2, 12, new IntentType?((IntentType) 171), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -321,7 +321,7 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability12.effects[2] = new Effect((EffectSO) instance1, 3, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
+      ability12.effects[2] = new Effect( instance1, 3, new IntentType?((IntentType) 170), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -363,4 +363,28 @@ namespace TevlevsRapscallions
       Brain.Cop = character;
     }
   }
+    public class SetCasterExtraSpritesIfTargetConstrictedEffect : EffectSO
+    {
+        [SerializeField]
+        public ExtraSpriteType _spriteType;
+
+        public override bool PerformEffect(CombatStats stats, IUnit caster, TargetSlotInfo[] targets, bool areTargetSlots, int entryVariable, out int exitAmount)
+        {
+            exitAmount = 0;
+            foreach (TargetSlotInfo target in targets)
+            {
+                if (Constricter.InConstricting(stats, target.Unit))
+                {
+                    exitAmount++;
+                }
+            }
+            if (caster.IsUnitCharacter && exitAmount > 0)
+            {
+                CombatManager.Instance.AddUIAction(new CharacterSetExtraSpriteUIAction(caster.ID, _spriteType));
+                return true;
+            }
+
+            return false;
+        }
+    }
 }

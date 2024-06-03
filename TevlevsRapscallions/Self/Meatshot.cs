@@ -22,7 +22,7 @@ namespace TevlevsRapscallions
       ability1.description = "Convert 5 hp from this party member as mutualism.";
       ability1.cost = new ManaColorSO[1]{ Pigments.Gray };
       ability1.effects = new Effect[1];
-      ability1.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<ConvertHealthToMutualismEffect>(), 5, new IntentType?((IntentType) 82), Slots.Self);
+      ability1.effects[0] = new Effect( ScriptableObject.CreateInstance<ConvertHealthToMutualismEffect>(), 5, new IntentType?((IntentType) 82), Slots.Self);
       ability1.visuals = LoadedAssetsHandler.GetEnemy("UnfinishedHeir_BOSS").abilities[2].ability.visuals;
       ExtraAbility_Wearable_SMS instance1 = ScriptableObject.CreateInstance<ExtraAbility_Wearable_SMS>();
       instance1._extraAbility = ability1.CharacterAbility();
@@ -36,11 +36,11 @@ namespace TevlevsRapscallions
       instance4._damagePercentage = ((ParasitePassiveAbility) ((AddPassiveEffect) LoadedAssetsHandler.GetCharacterAbility("Symbiosis_1_A").effects[5].effect)._passiveToAdd)._damagePercentage;
       instance4.connectionEffects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) instance2, 1, new IntentType?(), Slots.Self)
+        new Effect( instance2, 1, new IntentType?(), Slots.Self)
       });
       instance4.disconnectionEffects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) instance3, 1, new IntentType?(), Slots.Self)
+        new Effect( instance3, 1, new IntentType?(), Slots.Self)
       });
       instance4.connectionImmediateEffect = ((ParasitePassiveAbility) ((AddPassiveEffect) LoadedAssetsHandler.GetCharacterAbility("Symbiosis_1_A").effects[5].effect)._passiveToAdd).connectionImmediateEffect;
       instance4.disconnectionImmediateEffect = ((ParasitePassiveAbility) ((AddPassiveEffect) LoadedAssetsHandler.GetCharacterAbility("Symbiosis_1_A").effects[5].effect)._passiveToAdd).disconnectionImmediateEffect;
@@ -76,10 +76,10 @@ namespace TevlevsRapscallions
       ability2.description = "Force the left ally to enter this party member.\nIf this party member has mutualism, instead eject ally.";
       ability2.cost = new ManaColorSO[1]{ Pigments.Yellow };
       ability2.effects = new Effect[4];
-      ability2.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RemoveMutualismEffect>(), 1, new IntentType?((IntentType) 83), Slots.Self);
-      ability2.effects[1] = new Effect((EffectSO) instance7, 1, new IntentType?(), Slots.Self, (EffectConditionSO) instance5);
-      ability2.effects[2] = new Effect((EffectSO) instance8, 1, new IntentType?(), Slots.Self, (EffectConditionSO) instance6);
-      ability2.effects[3] = new Effect((EffectSO) instance9, 1, new IntentType?((IntentType) 61), AllySlots.Left, (EffectConditionSO) instance5);
+      ability2.effects[0] = new Effect( ScriptableObject.CreateInstance<RemoveMutualismEffect>(), 1, new IntentType?((IntentType) 83), Slots.Self);
+      ability2.effects[1] = new Effect( instance7, 1, new IntentType?(), Slots.Self,  instance5);
+      ability2.effects[2] = new Effect( instance8, 1, new IntentType?(), Slots.Self,  instance6);
+      ability2.effects[3] = new Effect( instance9, 1, new IntentType?((IntentType) 61), AllySlots.Left,  instance5);
       PerformEffectPassiveAbility instance10 = ScriptableObject.CreateInstance<PerformEffectPassiveAbility>();
       ((BasePassiveAbilitySO) instance10)._passiveName = "Leaky(3)";
       ((BasePassiveAbilitySO) instance10).passiveIcon = Passives.Leaky.passiveIcon;
@@ -88,7 +88,7 @@ namespace TevlevsRapscallions
       ((BasePassiveAbilitySO) instance10)._characterDescription = "Upon receiving direct damage, this character generates 3 extra pigment of its health colour.";
       instance10.effects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<GenerateCasterHealthManaEffect>(), 3, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<GenerateCasterHealthManaEffect>(), 3, new IntentType?(), Slots.Self)
       });
       ((BasePassiveAbilitySO) instance10)._triggerOn = new TriggerCalls[1]
       {
@@ -133,8 +133,8 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability3.effects = new Effect[2];
-      ability3.effects[0] = new Effect((EffectSO) instance11, 8, new IntentType?((IntentType) 2), Slots.Front);
-      ability3.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
+      ability3.effects[0] = new Effect( instance11, 8, new IntentType?((IntentType) 2), Slots.Front);
+      ability3.effects[1] = new Effect( ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
       ability3.animationTarget = Slots.Front;
       ability3.visuals = LoadedAssetsHandler.GetEnemy("Flarb_EN").abilities[0].ability.visuals;
       Ability ability4 = new Ability();
@@ -149,8 +149,8 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability4.effects = new Effect[2];
-      ability4.effects[0] = new Effect((EffectSO) instance11, 10, new IntentType?((IntentType) 2), Slots.Front);
-      ability4.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
+      ability4.effects[0] = new Effect( instance11, 10, new IntentType?((IntentType) 2), Slots.Front);
+      ability4.effects[1] = new Effect( ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
       ability4.animationTarget = Slots.Front;
       ability4.visuals = LoadedAssetsHandler.GetEnemy("Flarb_EN").abilities[0].ability.visuals;
       Ability ability5 = new Ability();
@@ -165,8 +165,8 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability5.effects = new Effect[2];
-      ability5.effects[0] = new Effect((EffectSO) instance11, 11, new IntentType?((IntentType) 3), Slots.Front);
-      ability5.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
+      ability5.effects[0] = new Effect( instance11, 11, new IntentType?((IntentType) 3), Slots.Front);
+      ability5.effects[1] = new Effect( ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
       ability5.animationTarget = Slots.Front;
       ability5.visuals = LoadedAssetsHandler.GetEnemy("Flarb_EN").abilities[0].ability.visuals;
       Ability ability6 = new Ability();
@@ -181,8 +181,8 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability6.effects = new Effect[2];
-      ability6.effects[0] = new Effect((EffectSO) instance11, 14, new IntentType?((IntentType) 3), Slots.Front);
-      ability6.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
+      ability6.effects[0] = new Effect( instance11, 14, new IntentType?((IntentType) 3), Slots.Front);
+      ability6.effects[1] = new Effect( ScriptableObject.CreateInstance<ForceTargetFarSwapEffect>(), 0, new IntentType?((IntentType) 40), Slots.Front);
       ability6.animationTarget = Slots.Front;
       ability6.visuals = LoadedAssetsHandler.GetEnemy("Flarb_EN").abilities[0].ability.visuals;
       DamageBasedOnMutualismEffect instance12 = ScriptableObject.CreateInstance<DamageBasedOnMutualismEffect>();
@@ -202,10 +202,10 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability7.effects = new Effect[4];
-      ability7.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 4, new IntentType?((IntentType) 1), Slots.LeftRight);
-      ability7.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 2, new IntentType?((IntentType) 151), Slots.LeftRight);
-      ability7.effects[2] = new Effect((EffectSO) instance13, 0, new IntentType?(), Slots.Self);
-      ability7.effects[3] = new Effect((EffectSO) instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight, (EffectConditionSO) instance5);
+      ability7.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 4, new IntentType?((IntentType) 1), Slots.LeftRight);
+      ability7.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 2, new IntentType?((IntentType) 151), Slots.LeftRight);
+      ability7.effects[2] = new Effect( instance13, 0, new IntentType?(), Slots.Self);
+      ability7.effects[3] = new Effect( instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight,  instance5);
       ability7.animationTarget = Slots.LeftRight;
       ability7.visuals = LoadedAssetsHandler.GetEnemy("Revola_EN").abilities[1].ability.visuals;
       Ability ability8 = new Ability();
@@ -220,10 +220,10 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability8.effects = new Effect[4];
-      ability8.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 6, new IntentType?((IntentType) 1), Slots.LeftRight);
-      ability8.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 2, new IntentType?((IntentType) 151), Slots.LeftRight);
-      ability8.effects[2] = new Effect((EffectSO) instance13, 0, new IntentType?(), Slots.Self);
-      ability8.effects[3] = new Effect((EffectSO) instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight, (EffectConditionSO) instance5);
+      ability8.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 6, new IntentType?((IntentType) 1), Slots.LeftRight);
+      ability8.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 2, new IntentType?((IntentType) 151), Slots.LeftRight);
+      ability8.effects[2] = new Effect( instance13, 0, new IntentType?(), Slots.Self);
+      ability8.effects[3] = new Effect( instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight,  instance5);
       ability8.animationTarget = Slots.LeftRight;
       ability8.visuals = LoadedAssetsHandler.GetEnemy("Revola_EN").abilities[1].ability.visuals;
       Ability ability9 = new Ability();
@@ -238,10 +238,10 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability9.effects = new Effect[4];
-      ability9.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 8, new IntentType?((IntentType) 2), Slots.LeftRight);
-      ability9.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 2, new IntentType?((IntentType) 151), Slots.LeftRight);
-      ability9.effects[2] = new Effect((EffectSO) instance13, 0, new IntentType?(), Slots.Self);
-      ability9.effects[3] = new Effect((EffectSO) instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight, (EffectConditionSO) instance5);
+      ability9.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 8, new IntentType?((IntentType) 2), Slots.LeftRight);
+      ability9.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 2, new IntentType?((IntentType) 151), Slots.LeftRight);
+      ability9.effects[2] = new Effect( instance13, 0, new IntentType?(), Slots.Self);
+      ability9.effects[3] = new Effect( instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight,  instance5);
       ability9.animationTarget = Slots.LeftRight;
       ability9.visuals = LoadedAssetsHandler.GetEnemy("Revola_EN").abilities[1].ability.visuals;
       Ability ability10 = new Ability();
@@ -256,10 +256,10 @@ namespace TevlevsRapscallions
         Pigments.Blue
       };
       ability10.effects = new Effect[4];
-      ability10.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageEffect>(), 10, new IntentType?((IntentType) 2), Slots.LeftRight);
-      ability10.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 3, new IntentType?((IntentType) 151), Slots.LeftRight);
-      ability10.effects[2] = new Effect((EffectSO) instance13, 0, new IntentType?(), Slots.Self);
-      ability10.effects[3] = new Effect((EffectSO) instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight, (EffectConditionSO) instance5);
+      ability10.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageEffect>(), 10, new IntentType?((IntentType) 2), Slots.LeftRight);
+      ability10.effects[1] = new Effect( ScriptableObject.CreateInstance<ApplyRupturedEffect>(), 3, new IntentType?((IntentType) 151), Slots.LeftRight);
+      ability10.effects[2] = new Effect( instance13, 0, new IntentType?(), Slots.Self);
+      ability10.effects[3] = new Effect( instance12, 0, new IntentType?((IntentType) 1), Slots.LeftRight,  instance5);
       ability10.animationTarget = Slots.LeftRight;
       ability10.visuals = LoadedAssetsHandler.GetEnemy("Revola_EN").abilities[1].ability.visuals;
       DamageEffect instance14 = ScriptableObject.CreateInstance<DamageEffect>();
@@ -276,8 +276,8 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability11.effects = new Effect[2];
-      ability11.effects[0] = new Effect((EffectSO) instance14, 6, new IntentType?((IntentType) 1), Slots.Front);
-      ability11.effects[1] = new Effect((EffectSO) instance15, 0, new IntentType?((IntentType) 104), Slots.Self, (EffectConditionSO) instance5);
+      ability11.effects[0] = new Effect( instance14, 6, new IntentType?((IntentType) 1), Slots.Front);
+      ability11.effects[1] = new Effect( instance15, 0, new IntentType?((IntentType) 104), Slots.Self,  instance5);
       ability11.animationTarget = Slots.Front;
       ability11.visuals = LoadedAssetsHandler.GetEnemy("MudLung_EN").abilities[0].ability.visuals;
       Ability ability12 = new Ability();
@@ -290,8 +290,8 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability12.effects = new Effect[2];
-      ability12.effects[0] = new Effect((EffectSO) instance14, 8, new IntentType?((IntentType) 1), Slots.Front);
-      ability12.effects[1] = new Effect((EffectSO) instance15, 0, new IntentType?((IntentType) 104), Slots.Self, (EffectConditionSO) instance5);
+      ability12.effects[0] = new Effect( instance14, 8, new IntentType?((IntentType) 1), Slots.Front);
+      ability12.effects[1] = new Effect( instance15, 0, new IntentType?((IntentType) 104), Slots.Self,  instance5);
       ability12.animationTarget = Slots.Front;
       ability12.visuals = LoadedAssetsHandler.GetEnemy("MudLung_EN").abilities[0].ability.visuals;
       Ability ability13 = new Ability();
@@ -304,8 +304,8 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability13.effects = new Effect[2];
-      ability13.effects[0] = new Effect((EffectSO) instance14, 10, new IntentType?((IntentType) 1), Slots.Front);
-      ability13.effects[1] = new Effect((EffectSO) instance15, 0, new IntentType?((IntentType) 104), Slots.Self, (EffectConditionSO) instance5);
+      ability13.effects[0] = new Effect( instance14, 10, new IntentType?((IntentType) 1), Slots.Front);
+      ability13.effects[1] = new Effect( instance15, 0, new IntentType?((IntentType) 104), Slots.Self,  instance5);
       ability13.animationTarget = Slots.Front;
       ability13.visuals = LoadedAssetsHandler.GetEnemy("MudLung_EN").abilities[0].ability.visuals;
       Ability ability14 = new Ability();
@@ -318,8 +318,8 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability14.effects = new Effect[2];
-      ability14.effects[0] = new Effect((EffectSO) instance14, 12, new IntentType?((IntentType) 1), Slots.Front);
-      ability14.effects[1] = new Effect((EffectSO) instance15, 0, new IntentType?((IntentType) 104), Slots.Self, (EffectConditionSO) instance5);
+      ability14.effects[0] = new Effect( instance14, 12, new IntentType?((IntentType) 1), Slots.Front);
+      ability14.effects[1] = new Effect( instance15, 0, new IntentType?((IntentType) 104), Slots.Self,  instance5);
       ability14.animationTarget = Slots.Front;
       ability14.visuals = LoadedAssetsHandler.GetEnemy("MudLung_EN").abilities[0].ability.visuals;
       character.AddLevel(22, new Ability[3]

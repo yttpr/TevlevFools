@@ -48,8 +48,8 @@ namespace TevlevsRapscallions
       instance3._extraModifiers = new WearableStaticModifierSetterSO[0];
       instance1.disconnectionEffects = ExtensionMethods.ToEffectInfoArray(new Effect[2]
       {
-        new Effect((EffectSO) instance2, 0, new IntentType?(), Slots.Self),
-        new Effect((EffectSO) instance3, 1, new IntentType?(), Slots.Self)
+        new Effect( instance2, 0, new IntentType?(), Slots.Self),
+        new Effect( instance3, 1, new IntentType?(), Slots.Self)
       });
       instance1.connectionImmediateEffect = ((ParasitePassiveAbility) ((AddPassiveEffect) LoadedAssetsHandler.GetCharacterAbility("Eviscerate_1_A").effects[5].effect)._passiveToAdd).connectionImmediateEffect;
       instance1.disconnectionImmediateEffect = ((ParasitePassiveAbility) ((AddPassiveEffect) LoadedAssetsHandler.GetCharacterAbility("Eviscerate_1_A").effects[5].effect)._passiveToAdd).disconnectionImmediateEffect;
@@ -60,7 +60,7 @@ namespace TevlevsRapscallions
       instance4._passiveToAdd = (BasePassiveAbilitySO) instance1;
       instance1.effects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) instance4, 2, new IntentType?(), Slots.Self)
+        new Effect( instance4, 2, new IntentType?(), Slots.Self)
       });
       ((BasePassiveAbilitySO) instance1).passiveIcon = ((AddPassiveEffect) LoadedAssetsHandler.GetCharacterAbility("Eviscerate_1_A").effects[5].effect)._passiveToAdd.passiveIcon;
       ((BasePassiveAbilitySO) instance1).specialStoredValue = ((AddPassiveEffect) LoadedAssetsHandler.GetCharacterAbility("Eviscerate_1_A").effects[5].effect)._passiveToAdd.specialStoredValue;
@@ -88,9 +88,9 @@ namespace TevlevsRapscallions
         Pigments.Yellow
       };
       ability1.effects = new Effect[3];
-      ability1.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<SwapToSidesReturnCurrentSlotEffect>(), 1, new IntentType?((IntentType) 40), Slots.Self);
-      ability1.effects[1] = new Effect((EffectSO) instance6, 4, new IntentType?((IntentType) 1), Slots.Front);
-      ability1.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<ReturnBackToSlotBasedOnPreviousExitAmountEffect>(), 4, new IntentType?((IntentType) 40), Slots.Self);
+      ability1.effects[0] = new Effect( ScriptableObject.CreateInstance<SwapToSidesReturnCurrentSlotEffect>(), 1, new IntentType?((IntentType) 40), Slots.Self);
+      ability1.effects[1] = new Effect( instance6, 4, new IntentType?((IntentType) 1), Slots.Front);
+      ability1.effects[2] = new Effect( ScriptableObject.CreateInstance<ReturnBackToSlotBasedOnPreviousExitAmountEffect>(), 4, new IntentType?((IntentType) 40), Slots.Self);
       ability1.animationTarget = Slots.Front;
       ability1.visuals = LoadedAssetsHandler.GetCharcater("Splig_CH").rankedData[0].rankAbilities[2].ability.visuals;
       Ability ability2 = new Ability();
@@ -102,14 +102,14 @@ namespace TevlevsRapscallions
         Pigments.SplitPigment(Pigments.Yellow, Pigments.Purple)
       };
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) instance5, 3, new IntentType?((IntentType) 104), Slots.Front);
+      ability2.effects[0] = new Effect( instance5, 3, new IntentType?((IntentType) 104), Slots.Front);
       RemoveMultipleStatusEffectsEffect instance7 = ScriptableObject.CreateInstance<RemoveMultipleStatusEffectsEffect>();
       instance7._statusToRemove = new StatusEffectType[1]
       {
         (StatusEffectType) 2
       };
-      ability2.effects[1] = new Effect((EffectSO) instance7, 1, new IntentType?((IntentType) 191), Slots.Self);
-      ability2.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self, (EffectConditionSO) Conditions.Chance(50));
+      ability2.effects[1] = new Effect( instance7, 1, new IntentType?((IntentType) 191), Slots.Self);
+      ability2.effects[2] = new Effect( ScriptableObject.CreateInstance<RefreshAbilityUseEffect>(), 1, new IntentType?((IntentType) 85), Slots.Self,  Conditions.Chance(50));
       ability2.animationTarget = Slots.Front;
       ability2.visuals = LoadedAssetsHandler.GetEnemy("FlaMinGoa_EN").abilities[0].ability.visuals;
       Ability ability3 = new Ability();
@@ -122,7 +122,7 @@ namespace TevlevsRapscallions
         Pigments.Red
       };
       ability3.effects = new Effect[1];
-      ability3.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageIfNoParasitismEffect>(), 10, new IntentType?((IntentType) 2), Slots.Front);
+      ability3.effects[0] = new Effect( ScriptableObject.CreateInstance<DamageIfNoParasitismEffect>(), 10, new IntentType?((IntentType) 2), Slots.Front);
       ability3.animationTarget = Slots.Front;
       ability3.visuals = LoadedAssetsHandler.GetEnemy("OsmanSinnoks_BOSS").abilities[0].ability.visuals;
       character.AddLevel(10, new Ability[3]
@@ -173,12 +173,12 @@ namespace TevlevsRapscallions
       instance2._characterCopy = "ScuttleFace_CH";
       instance2._permanentSpawn = true;
       ability1.effects = new Effect[3];
-      ability1.effects[0] = new Effect((EffectSO) instance1, 2, new IntentType?((IntentType) 0), Slots.Front);
-      ability1.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<PermaFleeCasterEffect>(), 1, new IntentType?(), Slots.Self, (EffectConditionSO) EZEffects.DidThat<PreviousEffectCondition>(true));
-      ability1.effects[2] = new Effect((EffectSO) SubActionEffect.Create(new Effect[1]
+      ability1.effects[0] = new Effect( instance1, 2, new IntentType?((IntentType) 0), Slots.Front);
+      ability1.effects[1] = new Effect( ScriptableObject.CreateInstance<PermaFleeCasterEffect>(), 1, new IntentType?(), Slots.Self,  EZEffects.DidThat<PreviousEffectCondition>(true));
+      ability1.effects[2] = new Effect( SubActionEffect.Create(new Effect[1]
       {
-        new Effect((EffectSO) instance2, 1, new IntentType?(), Slots.Self)
-      }), 1, new IntentType?((IntentType) 83), Slots.Self, (EffectConditionSO) EZEffects.DidThat<PreviousEffectCondition>(true, 2));
+        new Effect( instance2, 1, new IntentType?(), Slots.Self)
+      }), 1, new IntentType?((IntentType) 83), Slots.Self,  EZEffects.DidThat<PreviousEffectCondition>(true, 2));
       Ability ability2 = new Ability();
       ability2.name = "Skitter";
       ability2.description = "Fully heal this party member and instantly flee.";
@@ -186,10 +186,10 @@ namespace TevlevsRapscallions
       ability2.visuals = (AttackVisualsSO) null;
       ability2.animationTarget = Slots.Self;
       ability2.effects = new Effect[3];
-      ability2.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<FullHealEffect>(), 1, new IntentType?((IntentType) 22), Slots.Self);
-      ability2.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<DamageByCostEffect>(), 1, new IntentType?(), Slots.Self);
+      ability2.effects[0] = new Effect( ScriptableObject.CreateInstance<FullHealEffect>(), 1, new IntentType?((IntentType) 22), Slots.Self);
+      ability2.effects[1] = new Effect( ScriptableObject.CreateInstance<DamageByCostEffect>(), 1, new IntentType?(), Slots.Self);
       CustomIntentInfo customIntentInfo = new CustomIntentInfo("Fleeting", (IntentType) 83021006, Passives.Fleeting.passiveIcon, (IntentType) 100);
-      ability2.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<FleeTargetEffect>(), 1, new IntentType?(CustomIntentIconSystem.GetIntent("Fleeting")), Slots.Self);
+      ability2.effects[2] = new Effect( ScriptableObject.CreateInstance<FleeTargetEffect>(), 1, new IntentType?(CustomIntentIconSystem.GetIntent("Fleeting")), Slots.Self);
       character.AddLevel(5, new Ability[2]
       {
         ability1,

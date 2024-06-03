@@ -76,7 +76,7 @@ namespace TevlevsRapscallions
           targets = effect.targets != null ? (BaseCombatTargettingSO) GilbertFlipTargetting.Create(effect.targets) : Slots.Self
         };
         if (effectInfo.effect is PerformRandomAbilityFromCharacterEffect)
-          effectInfo.effect = (EffectSO) PerformRandomAbilityFromCharacterSwapTargetsEffect.Instance;
+          effectInfo.effect =  PerformRandomAbilityFromCharacterSwapTargetsEffect.Instance;
         effectInfoList.Add(effectInfo);
       }
       extraAbilityInfo.ability.effects = effectInfoList.ToArray();
@@ -116,11 +116,11 @@ namespace TevlevsRapscallions
           targets = effect.targets != null ? (BaseCombatTargettingSO) GilbertFlipTargetting.Create(effect.targets) : Slots.Self
         };
         if (effectInfo.effect is PerformRandomAbilityFromCharacterEffect)
-          effectInfo.effect = (EffectSO) PerformRandomAbilityFromCharacterSwapTargetsEffect.Instance;
+          effectInfo.effect =  PerformRandomAbilityFromCharacterSwapTargetsEffect.Instance;
         try
         {
           if (effectInfo.effect is PerformRandomAbilityEnemyEffect)
-            effectInfo.effect = (EffectSO) PerformRandomAbilityFromEnemySwapTargetsEffect.Instance;
+            effectInfo.effect =  PerformRandomAbilityFromEnemySwapTargetsEffect.Instance;
         }
         catch (Exception ex)
         {

@@ -14,14 +14,14 @@ namespace TevlevsRapscallions
     {
         public BaseCombatTargettingSO source;
 
-        public virtual bool AreTargetAllies
+        public override bool AreTargetAllies
         {
             get => (Object)this.source != (Object)null && this.source.AreTargetAllies;
         }
 
-        public virtual bool AreTargetSlots => false;
+        public override bool AreTargetSlots => false;
 
-        public virtual TargetSlotInfo[] GetTargets(
+        public override TargetSlotInfo[] GetTargets(
           SlotsCombat slots,
           int casterSlotID,
           bool isCasterCharacter)

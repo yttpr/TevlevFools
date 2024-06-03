@@ -25,8 +25,8 @@ namespace TevlevsRapscallions
       instance._extraModifiers = new WearableStaticModifierSetterSO[0];
       FishWhisperAction.effects = new Effect[2]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<FleeTargetEffect>(), 1, new IntentType?(), Slots.Self),
-        new Effect((EffectSO) instance, 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<FleeTargetEffect>(), 1, new IntentType?(), Slots.Self),
+        new Effect( instance, 1, new IntentType?(), Slots.Self)
       };
     }
 

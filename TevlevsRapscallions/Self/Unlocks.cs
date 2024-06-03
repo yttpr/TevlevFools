@@ -80,7 +80,7 @@ namespace TevlevsRapscallions
       osmanUnlock.firstEffects = new Effect[0];
       osmanUnlock.secondEffects = new Effect[1]
       {
-        new Effect((EffectSO) DamageEffect0ToEntry.Create(false), 10, new IntentType?(), Slots.Self)
+        new Effect( DamageEffect0ToEntry.Create(false), 10, new IntentType?(), Slots.Self)
       };
       osmanUnlock.secondPopUp = true;
       osmanUnlock.SecondTrigger = new TriggerCalls[1]
@@ -149,7 +149,7 @@ namespace TevlevsRapscallions
       osmanUnlock.firstEffects = new Effect[0];
       osmanUnlock.secondEffects = new Effect[1]
       {
-        new Effect((EffectSO) DamageEffect0ToEntry.Create(false), 10, new IntentType?(), Slots.Self)
+        new Effect( DamageEffect0ToEntry.Create(false), 10, new IntentType?(), Slots.Self)
       };
       osmanUnlock.secondPopUp = true;
       osmanUnlock.SecondTrigger = new TriggerCalls[1]
@@ -193,7 +193,7 @@ namespace TevlevsRapscallions
       instance1._repeatAmount = 10;
       effectItem1.effects = new Effect[1]
       {
-        new Effect((EffectSO) instance1, 1, new IntentType?(), Slots.Front)
+        new Effect( instance1, 1, new IntentType?(), Slots.Front)
       };
       effectItem1.equippedModifiers = new WearableStaticModifierSetterSO[0];
       Ability ability = new Ability();
@@ -208,7 +208,7 @@ namespace TevlevsRapscallions
       ability.visuals = LoadedAssetsHandler.LoadEnemyAbility("Domination_A").visuals;
       ability.animationTarget = Slots.Front;
       ability.effects = new Effect[1];
-      ability.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<FishItemDamageEffect>(), 16, new IntentType?((IntentType) 4), Slots.Front, (EffectConditionSO) ScriptableObject.CreateInstance<HasUsableItemCondition>());
+      ability.effects[0] = new Effect( ScriptableObject.CreateInstance<FishItemDamageEffect>(), 16, new IntentType?((IntentType) 4), Slots.Front,  ScriptableObject.CreateInstance<HasUsableItemCondition>());
       ExtraAbility_Wearable_SMS instance2 = ScriptableObject.CreateInstance<ExtraAbility_Wearable_SMS>();
       instance2._extraAbility = ability.CharacterAbility();
       //EZExtensions.AddToDollPool((WearableStaticModifierSetterSO) instance2);
@@ -278,13 +278,13 @@ namespace TevlevsRapscallions
       effect1.IgnoreShield = true;
       CasterSubActionEffect effect2 = CasterSubActionEffect.Create(new Effect[3]
       {
-        new Effect((EffectSO) instance1, 1, new IntentType?(), Slots.Front),
-        new Effect((EffectSO) effect1, 8, new IntentType?((IntentType) 2), Slots.Front),
-        new Effect((EffectSO) ScriptableObject.CreateInstance<Rupture1ToEntryEffect>(), 3, new IntentType?((IntentType) 151), Slots.Front)
+        new Effect( instance1, 1, new IntentType?(), Slots.Front),
+        new Effect( effect1, 8, new IntentType?((IntentType) 2), Slots.Front),
+        new Effect( ScriptableObject.CreateInstance<Rupture1ToEntryEffect>(), 3, new IntentType?((IntentType) 151), Slots.Front)
       });
       ability.effects = new Effect[6];
-      ability.effects[0] = new Effect((EffectSO) effect2, 1, new IntentType?((IntentType) 2), Slots.Front);
-      ability.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, new IntentType?((IntentType) 151), Slots.Front);
+      ability.effects[0] = new Effect( effect2, 1, new IntentType?((IntentType) 2), Slots.Front);
+      ability.effects[1] = new Effect( ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 1, new IntentType?((IntentType) 151), Slots.Front);
       ability.effects[2] = ability.effects[0];
       ability.effects[3] = ability.effects[1];
       ability.effects[4] = ability.effects[0];
@@ -338,7 +338,7 @@ namespace TevlevsRapscallions
       osmanUnlock.firstEffects = new Effect[0];
       osmanUnlock.secondEffects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<Rupture1ToEntryEffect>(), 2, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<Rupture1ToEntryEffect>(), 2, new IntentType?(), Slots.Self)
       };
       osmanUnlock.secondPopUp = true;
       osmanUnlock.SecondTrigger = new TriggerCalls[1]
@@ -389,7 +389,7 @@ namespace TevlevsRapscallions
       heavenUnlock.immediate = true;
       heavenUnlock.effects = new Effect[0];
       heavenUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
-      EffectItem osmanUnlock = new EffectItem();
+      DoubleEffectItem osmanUnlock = new DoubleEffectItem();
       osmanUnlock.name = "Rusty Mortar";
       osmanUnlock.flavorText = "\"Large hunk of iron.\"";
       osmanUnlock.description = "on Turn end deal 10 damage to the Leftmost Position. \nMove its targetting 1 position Right each turn looping back to its original position once the Rightmost position is reached.";
@@ -404,10 +404,10 @@ namespace TevlevsRapscallions
       osmanUnlock.namePopup = true;
       osmanUnlock.trigger = (TriggerCalls) 7;
       osmanUnlock.triggerConditions = new EffectorConditionSO[0];
-      osmanUnlock.immediate = false;
-      osmanUnlock.effects = new Effect[1]
+      osmanUnlock._firsteEffectImmediate = false;
+      osmanUnlock.firstEffects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<MortarCycleEffect>(), 10, new IntentType?(), Slots.SlotTarget(new int[9]
+        new Effect( ScriptableObject.CreateInstance<MortarCycleEffect>(), 10, new IntentType?(), Slots.SlotTarget(new int[9]
         {
           -4,
           -3,
@@ -421,6 +421,8 @@ namespace TevlevsRapscallions
         }))
       };
       osmanUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
+            osmanUnlock.secondEffects = new Effect[] { new Effect(ScriptableObject.CreateInstance<DamageEffect>(), 10, null, Slots.Self) };
+            osmanUnlock.SecondTrigger = new TriggerCalls[] { TriggerCalls.OnDamaged };
       if (Unlocks.debugging)
       {
         heavenUnlock.AddItem();
@@ -462,7 +464,7 @@ namespace TevlevsRapscallions
       heavenUnlock._firsteEffectImmediate = false;
       heavenUnlock.firstEffects = new Effect[1]
       {
-        new Effect((EffectSO) instance1, 1, new IntentType?(), Slots.Self)
+        new Effect( instance1, 1, new IntentType?(), Slots.Self)
       };
       heavenUnlock.SecondTrigger = new TriggerCalls[1]
       {
@@ -472,8 +474,8 @@ namespace TevlevsRapscallions
       heavenUnlock.secondPopUp = false;
       heavenUnlock.secondEffects = new Effect[2]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<RandomShopTreasureItemEffect>(), 1, new IntentType?(), Slots.Self),
-        new Effect((EffectSO) ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<RandomShopTreasureItemEffect>(), 1, new IntentType?(), Slots.Self),
+        new Effect( ScriptableObject.CreateInstance<ConsumeItemEffect>(), 1, new IntentType?(), Slots.Self)
       };
       heavenUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
       EZExtensions.PCall(new Action(R4IN_DMG.Add), "rainer damager");
@@ -490,7 +492,7 @@ namespace TevlevsRapscallions
       ability.visuals = LoadedAssetsHandler.LoadCharacterAbility("Slap_A").visuals;
       ability.animationTarget = Slots.Self;
       ability.effects = new Effect[3];
-      ability.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) EZEffects.TargetSide<TargetUnitsWithConstruct>(true, false));
+      ability.effects[0] = new Effect( ScriptableObject.CreateInstance<PerformRandomAbilityEffect>(), 1, new IntentType?((IntentType) 100), (BaseCombatTargettingSO) EZEffects.TargetSide<TargetUnitsWithConstruct>(true, false));
       ability.effects[1] = new Effect(ability.effects[0]._effect, 1, new IntentType?(), ability.effects[0]._target);
       ability.effects[2] = ability.effects[1];
       ExtraAbility_Wearable_SMS instance3 = ScriptableObject.CreateInstance<ExtraAbility_Wearable_SMS>();
@@ -513,7 +515,7 @@ namespace TevlevsRapscallions
       osmanUnlock.immediate = false;
       osmanUnlock.effects = new Effect[1]
       {
-        new Effect((EffectSO) instance2, 1, new IntentType?(), Slots.Self)
+        new Effect( instance2, 1, new IntentType?(), Slots.Self)
       };
       osmanUnlock.equippedModifiers = new WearableStaticModifierSetterSO[1]
       {
@@ -555,7 +557,7 @@ namespace TevlevsRapscallions
       heavenUnlock._firsteEffectImmediate = false;
       heavenUnlock.firstEffects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyPermenantFocusedEffect>(), 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<ApplyPermenantFocusedEffect>(), 1, new IntentType?(), Slots.Self)
       };
       heavenUnlock.SecondTrigger = new TriggerCalls[1]
       {
@@ -574,7 +576,7 @@ namespace TevlevsRapscallions
             copy._passiveToAdd = paras;
             heavenUnlock.secondEffects = new Effect[1]
       {
-        new Effect((EffectSO) copy, 3, new IntentType?(), Slots.Self)
+        new Effect( copy, 3, new IntentType?(), Slots.Self)
       };
       heavenUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
       EZExtensions.PCall(new Action(Scuttle.Minor), "maggot");
@@ -602,7 +604,7 @@ namespace TevlevsRapscallions
       osmanUnlock.immediate = false;
       osmanUnlock.effects = new Effect[1]
       {
-        new Effect((EffectSO) instance, 5, new IntentType?(), Slots.Self)
+        new Effect( instance, 5, new IntentType?(), Slots.Self)
       };
       osmanUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
       if (Unlocks.debugging)
@@ -641,7 +643,7 @@ namespace TevlevsRapscallions
       heavenUnlock.immediate = false;
       heavenUnlock.effects = new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyBubblesEffect>(), 1, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<ApplyBubblesEffect>(), 1, new IntentType?(), Slots.Self)
       };
       heavenUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
       Ability ability = new Ability();
@@ -678,7 +680,7 @@ namespace TevlevsRapscallions
         4
       }, true));
       ability.effects = new Effect[3];
-      ability.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<Bubbles0ToEntryEffect>(), 4, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[9]
+      ability.effects[0] = new Effect( ScriptableObject.CreateInstance<Bubbles0ToEntryEffect>(), 4, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -690,7 +692,7 @@ namespace TevlevsRapscallions
         3,
         4
       }));
-      ability.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[9]
+      ability.effects[1] = new Effect( ScriptableObject.CreateInstance<ExtraVariableForNextEffect>(), 2, new IntentType?((IntentType) 76443), Slots.SlotTarget(new int[9]
       {
         -4,
         -3,
@@ -702,9 +704,9 @@ namespace TevlevsRapscallions
         3,
         4
       }, true));
-      ability.effects[2] = new Effect((EffectSO) CasterRootActionEffect.Create(new Effect[1]
+      ability.effects[2] = new Effect( CasterRootActionEffect.Create(new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<Bubbles0ToEntryEffect>(), 2, new IntentType?(), Slots.SlotTarget(new int[9]
+        new Effect( ScriptableObject.CreateInstance<Bubbles0ToEntryEffect>(), 2, new IntentType?(), Slots.SlotTarget(new int[9]
         {
           -4,
           -3,
@@ -794,9 +796,9 @@ namespace TevlevsRapscallions
       osmanUnlock.triggerConditions = new EffectorConditionSO[0];
       osmanUnlock.immediate = false;
       osmanUnlock.effects = new Effect[3];
-      osmanUnlock.effects[0] = new Effect((EffectSO) ScriptableObject.CreateInstance<RemoveRandomAbilityEffect>(), 1, new IntentType?(), Slots.Self);
-      osmanUnlock.effects[1] = new Effect((EffectSO) ScriptableObject.CreateInstance<CharacterCasterAddRandomCharacterAbilityEffect>(), 1, new IntentType?(), Slots.Self);
-      osmanUnlock.effects[2] = new Effect((EffectSO) ScriptableObject.CreateInstance<UpdateCharacterUIEffect>(), 1, new IntentType?(), Slots.Self);
+      osmanUnlock.effects[0] = new Effect( ScriptableObject.CreateInstance<RemoveRandomAbilityEffect>(), 1, new IntentType?(), Slots.Self);
+      osmanUnlock.effects[1] = new Effect( ScriptableObject.CreateInstance<CharacterCasterAddRandomCharacterAbilityEffect>(), 1, new IntentType?(), Slots.Self);
+      osmanUnlock.effects[2] = new Effect( ScriptableObject.CreateInstance<UpdateCharacterUIEffect>(), 1, new IntentType?(), Slots.Self);
       osmanUnlock.equippedModifiers = new WearableStaticModifierSetterSO[0];
       if (Unlocks.debugging)
       {

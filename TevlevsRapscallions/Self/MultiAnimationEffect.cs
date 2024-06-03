@@ -26,7 +26,7 @@ namespace TevlevsRapscallions
       for (int index = 0; index < entryVariable; ++index)
       {
         int num;
-        if (((EffectSO) this.visuals.GetRandom<AnimationVisualsEffect>()).PerformEffect(stats, caster, targets, areTargetSlots, entryVariable, out num))
+        if (( this.visuals.GetRandom<AnimationVisualsEffect>()).PerformEffect(stats, caster, targets, areTargetSlots, entryVariable, out num))
         {
           flag = true;
           exitAmount += num;

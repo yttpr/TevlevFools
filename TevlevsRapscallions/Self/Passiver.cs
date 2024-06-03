@@ -55,7 +55,7 @@ namespace TevlevsRapscallions
       };
       instance.effects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<GenerateCasterHealthManaEffect>(), amount, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<GenerateCasterHealthManaEffect>(), amount, new IntentType?(), Slots.Self)
       });
       return (BasePassiveAbilitySO) instance;
     }
@@ -85,7 +85,7 @@ namespace TevlevsRapscallions
       };
       instance.effects = ExtensionMethods.ToEffectInfoArray(new Effect[1]
       {
-        new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyFireSlotEffect>(), amount, new IntentType?(), Slots.Self)
+        new Effect( ScriptableObject.CreateInstance<ApplyFireSlotEffect>(), amount, new IntentType?(), Slots.Self)
       });
       return (BasePassiveAbilitySO) instance;
     }

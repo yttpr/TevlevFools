@@ -46,7 +46,7 @@ namespace TevlevsRapscallions
             ++exitAmount;
             CombatManager.Instance.AddSubAction((CombatAction) new EffectAction(ExtensionMethods.ToEffectInfoArray(new Effect[1]
             {
-              new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
+              new Effect( ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
             }), caster, 0));
           }
         }
@@ -58,7 +58,7 @@ namespace TevlevsRapscallions
             ++exitAmount;
             CombatManager.Instance.AddSubAction((CombatAction) new EffectAction(ExtensionMethods.ToEffectInfoArray(new Effect[1]
             {
-              new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
+              new Effect( ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
             }), caster, 0));
           }
         }
@@ -75,7 +75,7 @@ namespace TevlevsRapscallions
             ++exitAmount;
             CombatManager.Instance.AddSubAction((CombatAction) new EffectAction(ExtensionMethods.ToEffectInfoArray(new Effect[1]
             {
-              new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
+              new Effect( ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
             }), caster, 0));
           }
         }
@@ -87,7 +87,7 @@ namespace TevlevsRapscallions
             ++exitAmount;
             CombatManager.Instance.AddSubAction((CombatAction) new EffectAction(ExtensionMethods.ToEffectInfoArray(new Effect[1]
             {
-              new Effect((EffectSO) ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
+              new Effect( ScriptableObject.CreateInstance<ApplyShieldSlotEffect>(), 2, new IntentType?(), Slots.Self)
             }), caster, 0));
           }
         }

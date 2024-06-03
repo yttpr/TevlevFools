@@ -190,7 +190,7 @@ namespace TevlevsRapscallions
       tevlevsRapscallions.Bubble.icon = ResourceLoader.LoadSprite("BubbleIcon.png");
       tevlevsRapscallions.Bubble._fieldName = "Bubbles";
       tevlevsRapscallions.Bubble.slotStatusEffectType = (SlotStatusEffectType) 866795;
-      tevlevsRapscallions.Bubble._description = "Performing an action in the same location as Bubbles will pop it and heal equal to the amount of Bubbles (does not work for enemies). If any damage is taken while on Bubbles it explodes and deals Jolly Damage equal to the amount of Bubbles. 1 Bubbles is gained at the end of each turn.";
+      tevlevsRapscallions.Bubble._description = "Upon taking any damage in this position remove all Bubbles and receive an equal amount of Jolly Damage.\nUpon an ally performing an action in this position, remove all Bubbles and receive an equal amount of healing.\nBubbles is increased by 1 at the end of each turn.";
       tevlevsRapscallions.Bubble._applied_SE_Event = "event:/BubblesNoise";
       tevlevsRapscallions.Bubble._updated_SE_Event = self._stats.statusEffectDataBase[(StatusEffectType) 9].UpdatedSoundEvent;
       tevlevsRapscallions.Bubble._removed_SE_Event = self._stats.statusEffectDataBase[(StatusEffectType) 9].RemovedSoundEvent;
