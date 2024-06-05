@@ -233,15 +233,16 @@ namespace TevlevsRapscallions
       Ability ability10 = new Ability();
       ability10.sprite = ResourceLoader.LoadSprite("SkillFishyBusiness", 1);
       ability10.name = "Fishy Bargain";
-      ability10.description = "Inflict 3 random status or field effects to the opposing enemy. Increase Fish Whisperer by 0-1.";
+      ability10.description = "Inflict 3 random status or field effects to the opposing enemy. Increase Fish Whisperer by 0-1.\nHeal this party member 2 health.";
       ability10.cost = new ManaColorSO[2]
       {
         Pigments.Blue,
         Pigments.Blue
       };
-      ability10.effects = new Effect[2];
+      ability10.effects = new Effect[3];
       ability10.effects[0] = new Effect( instance9, 1, new IntentType?(), Slots.Front);
       ability10.effects[1] = new Effect( instance3, 1, new IntentType?(), Slots.Self,  Conditions.Chance(50));
+            ability10.effects[2] = new Effect(ScriptableObject.CreateInstance<HealEffect>(), 2, IntentType.Heal_1_4, Slots.Self);
       ability10.animationTarget = Slots.Self;
       ability10.visuals = LoadedAssetsHandler.GetEnemy("Scrungie_EN").abilities[3].ability.visuals;
       ApplyRandomStatusEffectEffect instance10 = ScriptableObject.CreateInstance<ApplyRandomStatusEffectEffect>();
@@ -249,15 +250,16 @@ namespace TevlevsRapscallions
       Ability ability11 = new Ability();
       ability11.sprite = ResourceLoader.LoadSprite("SkillFishyBusiness", 1);
       ability11.name = "Fishy Deal";
-      ability11.description = "Inflict 4 random status or field effects to the opposing enemy. Increase Fish Whisperer by 0-1.";
+      ability11.description = "Inflict 4 random status or field effects to the opposing enemy. Increase Fish Whisperer by 0-1.\nHeal this party member 3 health.";
       ability11.cost = new ManaColorSO[2]
       {
         Pigments.Blue,
         Pigments.Blue
       };
-      ability11.effects = new Effect[2];
+      ability11.effects = new Effect[3];
       ability11.effects[0] = new Effect( instance10, 1, new IntentType?(), Slots.Front);
       ability11.effects[1] = new Effect( instance3, 1, new IntentType?(), Slots.Self,  Conditions.Chance(50));
+            ability11.effects[2] = new Effect(ScriptableObject.CreateInstance<HealEffect>(), 3, IntentType.Heal_1_4, Slots.Self);
       ability11.animationTarget = Slots.Self;
       ability11.visuals = LoadedAssetsHandler.GetEnemy("Scrungie_EN").abilities[3].ability.visuals;
       ApplyRandomStatusEffectEffect instance11 = ScriptableObject.CreateInstance<ApplyRandomStatusEffectEffect>();
@@ -265,15 +267,16 @@ namespace TevlevsRapscallions
       Ability ability12 = new Ability();
       ability12.sprite = ResourceLoader.LoadSprite("SkillFishyBusiness", 1);
       ability12.name = "Fishy Business";
-      ability12.description = "Inflict 5 random status or field effects to the opposing enemy. Increase Fish Whisperer by 0-1.";
+      ability12.description = "Inflict 5 random status or field effects to the opposing enemy. Increase Fish Whisperer by 0-1.\nHeal this party member 3 health.";
       ability12.cost = new ManaColorSO[2]
       {
         Pigments.Blue,
         Pigments.Blue
       };
-      ability12.effects = new Effect[2];
+      ability12.effects = new Effect[3];
       ability12.effects[0] = new Effect( instance11, 1, new IntentType?(), Slots.Front);
       ability12.effects[1] = new Effect( instance3, 1, new IntentType?(), Slots.Self,  Conditions.Chance(50));
+            ability12.effects[2] = ability11.effects[2];
       ability12.animationTarget = Slots.Self;
       ability12.visuals = LoadedAssetsHandler.GetEnemy("Scrungie_EN").abilities[3].ability.visuals;
       character.AddLevel(13, new Ability[3]

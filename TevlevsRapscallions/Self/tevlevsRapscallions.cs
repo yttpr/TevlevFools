@@ -17,7 +17,7 @@ using UnityEngine;
 #nullable disable
 namespace TevlevsRapscallions
 {
-  [BepInPlugin("Tevlev.TevlevsRapscallions", "TevlevsRapscallions", "1.2.2")]
+  [BepInPlugin("Tevlev.TevlevsRapscallions", "TevlevsRapscallions", "1.2.2.1")]
     [BepInDependency("Bones404.BrutalAPI", BepInDependency.DependencyFlags.HardDependency)]
     public class tevlevsRapscallions : BaseUnityPlugin
   {
@@ -207,7 +207,7 @@ namespace TevlevsRapscallions
     {
       foreach (CharacterCombat characterCombat in CombatManager.Instance._stats.CharactersOnField.Values)
       {
-        if (characterCombat._currentName.Contains("LoveBug") && characterCombat.ID == self.CharacterID)
+        if (characterCombat._currentName.Contains("Lovebug") && characterCombat.ID == self.CharacterID)
           self.CharacterSprite = tevlevsRapscallions.LoveBugYippee.GetRandom<Sprite>();
         else if (characterCombat._currentName.Contains("ScuttleFace") && characterCombat.ID == self.CharacterID)
           self.CharacterSprite = tevlevsRapscallions.ScuttleFuckYippee.GetRandom<Sprite>();

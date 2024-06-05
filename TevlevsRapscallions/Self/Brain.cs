@@ -373,7 +373,7 @@ namespace TevlevsRapscallions
             exitAmount = 0;
             foreach (TargetSlotInfo target in targets)
             {
-                if (Constricter.InConstricting(stats, target.Unit))
+                if (target.HasUnit && Constricter.InConstricting(stats, target.Unit))
                 {
                     exitAmount++;
                 }
