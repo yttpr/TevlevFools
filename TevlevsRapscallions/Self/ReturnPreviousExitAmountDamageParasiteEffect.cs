@@ -5,6 +5,7 @@
 // Assembly location: C:\Users\windows\Downloads\TevlevsRapscallions.dll
 
 using BrutalAPI;
+using System.Collections;
 using UnityEngine;
 
 #nullable disable
@@ -51,10 +52,11 @@ namespace TevlevsRapscallions
           if (damageInfo.damageAmount > 0)
           {
             IUnit unit = target.Unit;
-            if (!unit.ContainsPassiveAbility((PassiveAbilityTypes) 45))
-              unit.AddPassiveAbility(this._passiveToAdd);
-            int num5 = unit.GetStoredValue((UnitStoredValueNames) 14) + num1;
-            unit.SetStoredValue((UnitStoredValueNames) 14, num5);
+            //if (!unit.ContainsPassiveAbility((PassiveAbilityTypes) 45))
+              //unit.AddPassiveAbility(this._passiveToAdd);
+            //int num5 = unit.GetStoredValue((UnitStoredValueNames) 14) + num1;
+            //unit.SetStoredValue((UnitStoredValueNames) 14, num5);
+                        CombatManager.Instance.AddSubAction(new AddParasitismSubAction(unit, num1, this._passiveToAdd));
           }
         }
       }
@@ -63,4 +65,23 @@ namespace TevlevsRapscallions
       return exitAmount > 0;
     }
   }
+    public class AddParasitismSubAction : CombatAction
+    {
+        public IUnit unit;
+        public int amount;
+        public BasePassiveAbilitySO passive;
+        public AddParasitismSubAction(IUnit unit, int amount, BasePassiveAbilitySO passive)
+        {
+            this.unit = unit;
+            this.amount = amount;
+            this.passive = passive;
+        }
+        public override IEnumerator Execute(CombatStats stats)
+        {
+            unit.AddPassiveAbility(passive);
+            int num5 = unit.GetStoredValue((UnitStoredValueNames)14) + amount;
+            unit.SetStoredValue((UnitStoredValueNames)14, num5);
+            yield return null;
+        }
+    }
 }

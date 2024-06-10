@@ -384,7 +384,7 @@ namespace TevlevsRapscallions
       Effect effect2 = new Effect( instance4, 1, new IntentType?((IntentType) 40), Slots.Self,  condition2);
       Effect effect3 = new Effect( instance4, 1, new IntentType?((IntentType) 40), Slots.Self,  condition3);
       Effect effect4 = new Effect( instance4, 1, new IntentType?((IntentType) 40), Slots.Self,  condition4);
-      Ability ability1 = new Ability();
+      Ability ability1 = new Ability(); 
       ability1.name = "Liquid Pummel";
       ability1.description = "If there is an Opposing enemy, deal 6 damage to them. \nOtherwise, halve this party member's maximum health and summon a Gilbert, refreshing this party member's ability usage if successful.";
       ability1.rarity = 5;

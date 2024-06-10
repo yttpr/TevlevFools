@@ -17,7 +17,7 @@ using UnityEngine;
 #nullable disable
 namespace TevlevsRapscallions
 {
-  [BepInPlugin("Tevlev.TevlevsRapscallions", "TevlevsRapscallions", "1.2.2.1")]
+  [BepInPlugin("Tevlev.TevlevsRapscallions", "TevlevsRapscallions", "1.2.2.2")]
     [BepInDependency("Bones404.BrutalAPI", BepInDependency.DependencyFlags.HardDependency)]
     public class tevlevsRapscallions : BaseUnityPlugin
   {
